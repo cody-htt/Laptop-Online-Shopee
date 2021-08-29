@@ -123,10 +123,10 @@
                                 <!-- product quantity -->
                                 <div class="qty d-flex pt-2">
                                     <div class="d-flex font-roboto w-25">
-                                        <button class="qty-up border bg-light"><em class="fas fa-angle-up"></em></button>
-                                        <input type="text" class="qty-input border px-2 w-100 bg-light" disabled value="1"
+                                        <button class="qty-up border bg-light" data-id="prod-1"><em class="fas fa-angle-up"></em></button>
+                                        <input type="text" class="qty-input border px-2 w-100 bg-light" data-id="prod-1" disabled value="1"
                                                placeholder="1">
-                                        <button class="qty-down border bg-light"><em class="fas fa-angle-down"></em></button>
+                                        <button class="qty-down border bg-light" data-id="prod-1"><em class="fas fa-angle-down"></em></button>
                                     </div>
                                     <button type="submit" class="btn font-roboto text-danger px-3 border-right">Delete</button>
                                     <button type="submit" class="btn font-roboto text-danger">Save for latter</button>
@@ -140,6 +140,7 @@
                             </div>
                         </div>
                         <!-- !Cart Item -->
+
                         <!-- Cart Item -->
                         <div class="row border-top py-3 mt-3">
                             <div class="col-sm-2">
@@ -165,10 +166,10 @@
                                 <!-- product quantity -->
                                 <div class="qty d-flex pt-2">
                                     <div class="d-flex font-roboto w-25">
-                                        <button class="qty-up border bg-light"><em class="fas fa-angle-up"></em></button>
-                                        <input type="text" class="qty-input border px-2 w-100 bg-light" disabled value="1"
+                                        <button class="qty-up border bg-light" data-id="prod-2"><em class="fas fa-angle-up"></em></button>
+                                        <input type="text" class="qty-input border px-2 w-100 bg-light" data-id="prod-2" disabled value="1"
                                                placeholder="1">
-                                        <button class="qty-down border bg-light"><em class="fas fa-angle-down"></em></button>
+                                        <button class="qty-down border bg-light" data-id="prod-2"><em class="fas fa-angle-down"></em></button>
                                     </div>
                                     <button type="submit" class="btn font-roboto text-danger px-3 border-right">Delete</button>
                                     <button type="submit" class="btn font-roboto text-danger">Save for latter</button>
@@ -183,7 +184,19 @@
                         </div>
                         <!-- !Cart Item -->
                     </div>
-                    <div class="col-sm-3"></div>
+                    <!-- Subtotal section -->
+                    <div class="col-sm-3">
+                        <div class="sub-total border text-center  mt-2">
+                            <h6 class="font-size-12 font-roboto text-success py-3"><em class="fas fa-check"></em> Your order is eligible for FREE Delivery</h6>
+                            <div class="border-top py-4">
+                                <h5 class="font-roboto font-size-16">Subtotal (2 items):&nbsp; 
+                                    <span class="text-danger">$<span class="text-danger" id="deal-price">3498</span></span>
+                                </h5>
+                                <button type="submit" class="btn btn-warning mt-3">Proceed to buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !Subtotal section -->
                 </div>
                 <!-- !Shopping Cart Item -->
             </div>
@@ -192,7 +205,7 @@
 
         <!-- New Laptop -->
         <section id="new-laptops">
-            <div class="container">
+            <div class="container py-5">
                 <h4 class="font-rubik font-size-20">New Laptops</h4>
                 <hr>
                 <!-- Owl Carousel -->
