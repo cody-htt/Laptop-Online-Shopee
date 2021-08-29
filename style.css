@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Raleway:wght@200&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/*      Sass template       */
+/* Global Classes */
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* typography classes */
+.font-baloo {
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+.font-rale {
+  font-family: "Raleway", cursive;
+}
+
+.font-rubik {
+  font-family: "Rubik", cursive;
+}
+
+.font-roboto {
+  font-family: "Roboto", cursive;
+}
+
+.font-size-12 {
+  font-size: 0.7em;
+}
+
+.font-size-14 {
+  font-size: 0.9em;
+}
+
+.font-size-16 {
+  font-size: 1.15em;
+}
+
+.font-size-20 {
+  font-size: 1.4em;
+}
+
+/* Color Template */
+.color-primary {
+  color: #fc5c65;
+}
+
+.color-primary-bg {
+  background: #fc5c65;
+}
+
+.color-second {
+  color: #4b7bec;
+}
+
+.color-second-bg {
+  background: #4b7bec;
+}
+
+.color-third {
+  color: #182C61;
+}
+
+.color-third-bg {
+  background: #182C61;
+}
+
+.color-yellow {
+  color: #f7b731;
+}
+
+.color-yellow-bg {
+  background: #f7b731;
+}
+
+.text-blogs-color {
+  color: #130f40;
+  font-weight: 600;
+}
+
+.color-grey-bg {
+  background: #CAD3C8;
+}
+
+.color-dark-bg {
+  background: #2C3A47;
+}
+
+.color-gold-bg {
+  background: #f7d794;
+}
+
+.p-text-color {
+  color: #3d3d3d;
+}
+
+/* Banner template */
+#banner-area {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#banner-area .owl-dots {
+  position: absolute;
+  margin-top: -1.3em;
+  margin-left: 48vw;
+}
+#banner-area .owl-dots .owl-dot span {
+  background: #fc5c65;
+  opacity: 0.3;
+  transition: transform 0.4s ease;
+}
+#banner-area .owl-dots .owl-dot.active span {
+  opacity: 0.6;
+  transform: scale(1.2);
+  box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.205);
+}
+#banner-area .owl-dots .owl-dot span:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+/* top-sale template */
+#top-sale .owl-carousel .item .product a {
+  overflow: hidden;
+}
+#top-sale .owl-carousel .item .product img {
+  transition: transform 0.5s ease;
+}
+#top-sale .owl-carousel .item .product img:hover {
+  transform: scale(1.1);
+}
+#top-sale .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 25%;
+  outline: none;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next,
+#top-sale .owl-carousel .owl-nav button.owl-prev {
+  font-size: 1.8em;
+  padding: 0 1rem;
+  color: #fc5c65;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next:hover,
+#top-sale .owl-carousel .owl-nav button.owl-prev:hover {
+  transform: scale(1.3);
+  background: #FFC0CB;
+}
+#top-sale .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+  margin-left: -1rem;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+  margin-right: -1rem;
+}
+
+/* Special Price Section Template */
+#special-price .grid .grid-item {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+/* Banner Adds Tempalte */
+#banner-adds img {
+  width: 24em;
+  height: 13em;
+}
+#banner-adds h4 {
+  color: #fff;
+  padding-top: 0.3em;
+  position: relative;
+  letter-spacing: 15px;
+  color: #fc5c65;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 5px #ff7bac, 0 0 10px #ff7bac, 0 0 20px #ff7bac, 0 0 40px #ff7bac, 0 0 80px #fc5c65, 0 0 100px #fc5c65, 0 0 120px #fc5c65;
+  animation: blinking 2.5s linear infinite;
+}
+
+/* New Laptops Template */
+#new-laptops .owl-dots .owl-dot span {
+  background: #fc5c65;
+  opacity: 0.3;
+  transition: transform 0.4s ease;
+}
+#new-laptops .owl-dots .owl-dot.active span {
+  opacity: 0.6;
+  transform: scale(1.2);
+  box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.205);
+}
+#new-laptops .owl-dots .owl-dot span:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+#blogs .owl-dots .owl-dot span {
+  background: #fc5c65;
+  opacity: 0.3;
+  transition: transform 0.4s ease;
+}
+#blogs .owl-dots .owl-dot.active span {
+  opacity: 0.6;
+  transform: scale(1.2);
+  box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.205);
+}
+#blogs .owl-dots .owl-dot span:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+#blogs .item img {
+  width: 18em;
+  height: 10em;
+}
+
+/*# sourceMappingURL=style.css.map */
