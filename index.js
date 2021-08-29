@@ -67,12 +67,13 @@ $(document).ready(
     //Product quantity section
     let $qty_up = $(".qty .qty-up");
     let $qty_down = $(".qty .qty-down");
-    let $input = $(".qty .qty-input");
+    // let $input = $(".qty .qty-input");
     let $default_val = 1;
     let $max_val = 14;
 
     //click on quantity up button
     $qty_up.click(function(e){
+        let $input = $(`.qty-input[data-id='${$(this).data("id")}']`);
         if($input.val() >= $default_val && $input.val() <= $max_val){
             $input.val(function(i, oldval){
                 return ++oldval;
@@ -82,6 +83,7 @@ $(document).ready(
 
     //click on quantity up button
     $qty_down.click(function(e){
+        let $input = $(`.qty-input[data-id='${$(this).data("id")}']`);
         if($input.val() > $default_val && $input.val() <= $max_val + 1){
             $input.val(function(i, oldval){
                 return --oldval;
