@@ -25,8 +25,8 @@
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-    <!-- Custome CSS Files -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
 
     <?php
     //Connect to MySQLi

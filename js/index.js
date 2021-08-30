@@ -1,7 +1,7 @@
 $(document).ready(
-    function () {
+    function (e) {
 
-        //Banner Owl Carousel
+        // Banner Owl Carousel
         $("#banner-area .owl-carousel").owlCarousel({
             autoplay: true,
             autoplayTimeout: 5000,
@@ -10,7 +10,7 @@ $(document).ready(
             items: 1,
         });
 
-        //Top sale Owl Carousel
+        // Top sale Owl Carousel
         $("#top-sale .owl-carousel").owlCarousel({
             autoplay: true,
             autoplayTimeout: 1500,
@@ -25,19 +25,19 @@ $(document).ready(
             }
         });
 
-        //Isotope Filter
+        // Isotope Filter
         var $grid = $(".grid").isotope({
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
         });
 
-        //filter items on button click
+        // Filter items on button click
         $(".button-group").on("click", "button", function () {
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({filter: filterValue});
         });
 
-        //New Laptops Owl Carousel
+        // New Laptops Owl Carousel
         $("#new-laptops .owl-carousel").owlCarousel({
             autoplay: true,
             autoplayTimeout: 2000,
@@ -52,7 +52,7 @@ $(document).ready(
             }
         });
 
-        //Blogs Owl carousel
+        // Blogs Owl carousel
         $('#blogs .owl-carousel').owlCarousel({
             loop: true,
             nav: false,
@@ -64,14 +64,14 @@ $(document).ready(
             }
         });
 
-        //Product quantity section
+        // Product quantity section
         let $qty_up = $(".qty .qty-up");
         let $qty_down = $(".qty .qty-down");
         let $deal_price = $("#deal-price");
         let $default_val = 1;
         let $max_val = 14;
 
-        //Click on qty up button
+        // Click on qty up button
         $qty_up.click(function (e) {
             let $input = $(`.qty-input[data-id='${$(this).data("id")}']`);
             let $price = $(`.product-price[data-id='${$(this).data("id")}']`);
@@ -101,7 +101,7 @@ $(document).ready(
             })
         });
 
-        // click on qty down button
+        // Click on qty down button
         $qty_down.click(function (e) {
             let $input = $(`.qty-input[data-id='${$(this).data("id")}']`);
             let $price = $(`.product-price[data-id='${$(this).data("id")}']`);
@@ -131,4 +131,57 @@ $(document).ready(
             })
         });
 
+        // Validation user register information
+        $("#reg-form").submit(function (event) {
+
+            //validate email field
+            let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            let $email = $("#email");
+            let $email_error = $("#email-error");
+
+            if(!emailReg.test($email)){
+                $email_error.text("Please enter a valid email")
+                event.preventDefault();
+            }
+            else {
+                return true;
+            }
+
+            //validate password field
+            let $password = $("#password");
+            let $error_pwd = $("#password-error");
+            let $confirm = $("#confirm-pwd");
+            let $confirm_error = $("#confirm-error");
+
+            if ($password.val().length < 6 || $password.val().length > 15) {
+                $error_pwd.text("Password must be between 6 to 12 letters");
+                event.preventDefault();
+            }
+            else if ($password.val() != $confirm.val()) {
+                $confirm_error.text("Password is not match");
+                event.preventDefault();
+            }
+            else {
+                return true;
+            }
+        });
+
+        //Upload profile avatar
+        let $uploadFile = $('#register .upload-profile-image input[type="file"]');
+        $uploadFile.change(function (){
+            readURL(this);
+        });
+
     });
+
+function readURL(input){
+    if(input.files && input.files[0]){
+        let reader = new FileReader();
+        reader.onload = function(e){
+            $("#register .upload-profile-image .img").attr('src', e.target.result);
+            $("#register .upload-profile-image .camera-icon").css({display:"none"});
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
