@@ -30,6 +30,8 @@ class Cart
 
     public function addToCart($userid, $itemid)
     {
+        $link = "http" . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
         if (isset($userid) && isset($itemid)) {
             $params = array(
                 "user_id" => $userid,
@@ -39,8 +41,12 @@ class Cart
             //Add item into cart
             $addResult = $this->insertIntoDatabase($params);
             if ($addResult) {
-                //reload index.php
-                header("Location:" . $_SERVER['PHP_SELF']);
+                //reload current page
+                if ($link == "http://localhost:81/Project-php/Laptop%20Online%20Shopee/product.php?" . "item_id={$itemid}") {
+                    header($link);
+                } else {
+                    header("Location:" . $_SERVER['PHP_SELF']);
+                }
             }
         }
     }

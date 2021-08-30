@@ -1,5 +1,4 @@
 <!-- Shopping Cart Section -->
-?>
 
 <section id="cart" class="py-3 mb-4">
     <div class="container-fluid w-75">
