@@ -1,0 +1,30 @@
+/* Banner Adds Tempalte */
+
+#banner-adds {
+
+  img {
+    width: 24em;
+    height: 13em;
+  }
+
+  h4 {
+    color: #fff;
+    padding-top: 0.3em;
+    position: relative;
+    letter-spacing: 15px;
+    color: $color-primary;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px #ff7bac,
+    0 0 10px #ff7bac,
+    0 0 20px #ff7bac,
+    0 0 40px #ff7bac,
+    0 0 80px #fc5c65,
+    0 0 100px #fc5c65,
+    0 0 120px #fc5c65;
+    animation: blinking 2.5s linear infinite;
+  }
+}
+
