@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Raleway:wght@200&family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 /*      Sass template       */
 /* Global Classes */
 button, button:focus {
@@ -84,6 +85,10 @@ button, button:focus {
 
 .color-dark-bg {
     background: #2C3A47;
+}
+
+.color-gold {
+    color: #f7d794;
 }
 
 .color-gold-bg {
@@ -256,3 +261,90 @@ button, button:focus {
         opacity: 0.6;
     }
 }
+/* Custom keyframe */
+
+/* Custom CSS for registration and login */
+:root{
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --color-red-orange: #ff5252;
+    --color-orange: #ff5e57;
+}
+
+#register{
+    padding: 5% 0;
+    background: url("../assets/avatar/background.png") no-repeat;
+    background-size: cover;
+}
+
+#login-form{
+    padding: 10% 0;
+}
+
+#register .color-primary {
+    color: var(--color-red-orange);
+}
+
+#register .upload-profile-image{
+    position: relative;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: filter .6s ease;
+}
+
+#register .upload-profile-image:hover{
+    filter: drop-shadow(1px 1px 25px var(--color-red-orange));
+}
+
+#upload-profile{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 200px;
+    margin-top: 0px;
+    opacity: 0;
+}
+
+#upload-profile::-webkit-file-upload-button{
+    visibility: hidden;
+}
+
+#upload-profile::before{
+    content: '';
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#register .upload-profile-image .camera-icon{
+    position: absolute;
+    top: 130px;
+    width: 50px !important;
+    transition: filter .6s ease;
+    filter: invert(30%) !important
+}
+
+#register .upload-profile-image:hover .camera-icon{
+    filter: invert(100%) !important
+}
+
+#reg-form input[type='text'],
+#reg-form input[type='email'],
+#reg-form input[type='password']{
+    border: none;
+    border-radius: unset;
+    border-bottom: 0.15em solid var(--color-orange);
+    font-family: var(--font-ubuntu);
+    font-size: 16px;
+}
+
+#reg-form input[type='text'],
+#reg-form input[type='email'],
+#reg-form input[type='password']{
+    outline: none;
+    box-shadow: none;
+}
+
+/* Custom CSS for registration and login */
