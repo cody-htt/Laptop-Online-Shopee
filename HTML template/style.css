@@ -192,13 +192,7 @@ button, button:focus {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    text-shadow: 0 0 5px #ff7bac,
-    0 0 10px #ff7bac,
-    0 0 20px #ff7bac,
-    0 0 40px #ff7bac,
-    0 0 60px #fc5c65,
-    0 0 80px #fc5c65,
-    0 0 100px #fc5c65;
+    text-shadow: 0 0 5px #ff7bac, 0 0 10px #ff7bac, 0 0 20px #ff7bac, 0 0 40px #ff7bac, 0 0 80px #fc5c65, 0 0 100px #fc5c65, 0 0 120px #fc5c65;
     animation: blinking 2.5s linear infinite;
 }
 
@@ -243,16 +237,3 @@ button, button:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-/* Custom keyframe */
-@keyframes blinking {
-    60%, 70%, 79% {
-        opacity: 1;
-    }
-    65%, 67%, 76%, 78% {
-        opacity: 0.2;
-    }
-    66%, 69%, 77% {
-        opacity: 0.6;
-    }
-}

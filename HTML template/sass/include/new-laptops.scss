@@ -1,0 +1,45 @@
+/* New Laptops Template */
+#new-laptops .owl-dots {
+
+  .owl-dot span {
+    background: $color-primary;
+    opacity: 0.3;
+    transition: transform 0.4s ease;
+  }
+
+  .owl-dot.active span {
+    opacity: 0.6;
+    transform: scale(1.2);
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.205);
+  }
+
+  .owl-dot span:hover {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+#blogs .owl-dots {
+
+  .owl-dot span {
+    background: $color-primary;
+    opacity: 0.3;
+    transition: transform 0.4s ease;
+  }
+
+  .owl-dot.active span {
+    opacity: 0.6;
+    transform: scale(1.2);
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.205);
+  }
+
+  .owl-dot span:hover {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+#blogs .item img {
+  width: 18em;
+  height: 10em;
+}
