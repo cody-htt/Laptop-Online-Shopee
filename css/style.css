@@ -312,16 +312,16 @@ button, button:focus {
 #upload-profile::before{
     content: '';
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     cursor: pointer;
     border-radius: 50%;
 }
 
 #register .upload-profile-image .camera-icon{
     position: absolute;
-    top: 130px;
-    width: 50px !important;
+    top: 150px;
+    width: 40px !important;
     transition: filter .6s ease;
     filter: invert(30%) !important
 }
