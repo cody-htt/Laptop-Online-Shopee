@@ -58,7 +58,6 @@ if(empty($error)){
     //Bind Value
     try{
         $init_statement->bind_param("sssss", $firstName, $lastName, $email, $hashed_password, $profileImage);
-        print "Success";
     } catch (Error $er) {
         print "Error: ". $er->getMessage();
         printf($init_statement->error);
@@ -66,7 +65,6 @@ if(empty($error)){
     //Execute SQL statement
     try{
         $init_statement->execute();
-        print "Success";
     } catch (Error $er) {
         print "Error: ". $er->getMessage();
     }
