@@ -18,6 +18,7 @@ class DBController
         if ($this->con->connect_error) {
             echo "Fail" . $this->con->connect_error;
         }
+        mysqli_set_charset($this->con,'utf8');
     }
 
     public function __destruct()

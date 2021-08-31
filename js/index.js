@@ -135,11 +135,11 @@ $(document).ready(
         $("#reg-form").submit(function (event) {
 
             //validate email field
-            let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            let emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;;
             let $email = $("#email");
             let $email_error = $("#email-error");
 
-            if(!emailReg.test($email)){
+            if(!emailReg.test($email.val())){
                 $email_error.text("Please enter a valid email")
                 event.preventDefault();
             }
@@ -174,12 +174,17 @@ $(document).ready(
 
     });
 
+// Create readURL function to let user upload image
 function readURL(input){
+    let $chooseFile = $("#register .upload-profile-image .img");
+    let $camera_icon = $("#register .upload-profile-image .camera-icon");
+    let $avatar_text = $("#register .upload-profile-image #avatar-text");
     if(input.files && input.files[0]){
         let reader = new FileReader();
         reader.onload = function(e){
-            $("#register .upload-profile-image .img").attr('src', e.target.result);
-            $("#register .upload-profile-image .camera-icon").css({display:"none"});
+            $chooseFile.attr('src', e.target.result);
+            $camera_icon.css({display:"none"});
+            $avatar_text.text('You are cute!!!');
         }
 
         reader.readAsDataURL(input.files[0]);
