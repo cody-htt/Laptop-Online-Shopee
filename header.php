@@ -46,7 +46,8 @@
         <div class="col-md-4 offset-md-3 text-right">
                 <span class="font-roboto font-size-14">
                     <a href="login.php" class="px-1 border-right p-text-color">Login</a>
-                    <a href="registration.php" class="px-1 border-right p-text-color">Create Account?</a>
+                    <a href="registration.php" class="px-1 border-right p-text-color">New Account?</a>
+                    <a href="user-info.php" class="px-1 border-right p-text-color">User Info</a>
                 </span>
         </div>
     </div>

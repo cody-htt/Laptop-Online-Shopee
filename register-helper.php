@@ -50,9 +50,29 @@ function upload_profile($path, $file): string
 
     //Return the default image
     return $path . $default;
-
 }
 
+//Get user info
+function get_user_info($con, $user_id)
+{
+    $query = "SELECT first_name, last_name, user_email, profile_image FROM user WHERE user_id=?";
+    try{
+        $init_statement_getInfo = $con->stmt_init();
+    } catch (ErrorException $er) {
+        print "Error: ". $er->getMessage();
+    }
+    //Prepare SQL statement
+    $init_statement_getInfo->prepare($query);
+    //Bind Value
+    $init_statement_getInfo->bind_param('i', $user_id);
+    //Execute SQL Statement
+    $init_statement_getInfo->execute();
+
+    $result = mysqli_stmt_get_result($init_statement_getInfo);
+    $row = mysqli_fetch_array($result);
+
+    return empty($row) ? false : $row;
+}
 
 
 

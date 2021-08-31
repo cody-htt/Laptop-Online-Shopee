@@ -1,6 +1,7 @@
 <?php
+session_start();
 //include registration_header.php file
-include('registration_header.php');
+require('registration_header.php');
 
 //Call for register-helper
 require ('register-helper.php');
@@ -9,6 +10,10 @@ require ('register-helper.php');
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('login-process.php');
+}
+
+if (isset($_SESSION['userID'])){
+    $user = get_user_info($db->con, $_SESSION['userID']);
 }
 ?>
 
@@ -24,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="upload-profile-image d-flex justify-content-center py-5">
                 <div class="text-center">
-                    <img src="./assets/avatar/demo-avatar.png" style="width: 250px; height: 250px;"
+                    <img src="<?php echo $user['profile_image'] ?? './assets/avatar/demo-avatar.png'; ?>"
+                         style="width: 250px; height: 250px;"
                          class="img rounded-circle" alt="profile">
                 </div>
             </div>

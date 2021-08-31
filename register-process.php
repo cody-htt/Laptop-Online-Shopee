@@ -45,32 +45,35 @@ if(empty($error)){
 
     //Initial a MySQL statement
     try{
-        $init_statement = $db->con->stmt_init();
+        $init_statement_regist = $db->con->stmt_init();
     } catch (ErrorException $er) {
         print "Error: ". $er->getMessage();
     }
     //Prepare SQL statement
     try{
-        $init_statement->prepare($query_string);
+        $init_statement_regist->prepare($query_string);
     } catch (ErrorException $er) {
         print "Error: ". $er->getMessage();
     }
     //Bind Value
     try{
-        $init_statement->bind_param("sssss", $firstName, $lastName, $email, $hashed_password, $profileImage);
+        $init_statement_regist->bind_param("sssss", $firstName, $lastName, $email, $hashed_password, $profileImage);
     } catch (Error $er) {
         print "Error: ". $er->getMessage();
-        printf($init_statement->error);
+        printf($init_statement_regist->error);
     }
     //Execute SQL statement
     try{
-        $init_statement->execute();
+        $init_statement_regist->execute();
     } catch (Error $er) {
         print "Error: ". $er->getMessage();
     }
-
-    if($init_statement->affected_rows == 1){
-        $init_statement->close();
+    //Close my_sqli object
+    $init_statement_regist->close();
+    if($init_statement_regist->affected_rows == 1){
+        $init_statement_regist->close();
+        //start a new session
+        $_SESSION['userID'] = mysqli_insert_id($db->con);
         header('location:login.php');
         exit();
     }

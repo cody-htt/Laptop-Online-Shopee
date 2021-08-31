@@ -201,9 +201,10 @@ button, button:focus {
     0 0 10px #ff7bac,
     0 0 20px #ff7bac,
     0 0 40px #ff7bac,
-    0 0 60px #fc5c65,
-    0 0 80px #fc5c65,
-    0 0 100px #fc5c65;
+    0 0 60px #ff7675,
+    0 0 80px #ff7675,
+    0 0 100px #fc5c65,
+    0 0 120px #fc5c65;
     animation: blinking 2.5s linear infinite;
 }
 
