@@ -87,8 +87,8 @@ button, button:focus {
     background: #2C3A47;
 }
 
-.color-gold {
-    color: #f7d794;
+.color-selected {
+    color: #ffeaa7;
 }
 
 .color-gold-bg {
@@ -270,14 +270,14 @@ button, button:focus {
     --color-orange: #ff5e57;
 }
 
-#register{
+#register, #login-form{
     padding: 5% 0;
-    background: url("../assets/avatar/background.png") no-repeat;
+    background: url("../assets/avatar/background-3.jpg") no-repeat;
     background-size: cover;
 }
 
 #login-form{
-    padding: 10% 0;
+    padding: 10% !important;
 }
 
 #register .color-primary {
@@ -286,7 +286,7 @@ button, button:focus {
 
 #register .upload-profile-image{
     position: relative;
-    width: 10%;
+    width: 12%;
     margin-left: auto;
     margin-right: auto;
     transition: filter .6s ease;
@@ -332,7 +332,10 @@ button, button:focus {
 
 #reg-form input[type='text'],
 #reg-form input[type='email'],
-#reg-form input[type='password']{
+#reg-form input[type='password'],
+#log-form input[type='text'],
+#log-form input[type='email'],
+#log-form input[type='password']{
     border: none;
     border-radius: unset;
     border-bottom: 0.15em solid var(--color-orange);
@@ -342,7 +345,10 @@ button, button:focus {
 
 #reg-form input[type='text'],
 #reg-form input[type='email'],
-#reg-form input[type='password']{
+#reg-form input[type='password'],
+#log-form input[type='text'],
+#log-form input[type='email'],
+#log-form input[type='password']{
     outline: none;
     box-shadow: none;
 }

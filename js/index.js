@@ -134,26 +134,20 @@ $(document).ready(
         // Validation user register information
         $("#reg-form").submit(function (event) {
 
-            //validate email field
             let emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;;
             let $email = $("#email");
             let $email_error = $("#email-error");
-
-            if(!emailReg.test($email.val())){
-                $email_error.text("Please enter a valid email")
-                event.preventDefault();
-            }
-            else {
-                return true;
-            }
-
-            //validate password field
             let $password = $("#password");
             let $error_pwd = $("#password-error");
             let $confirm = $("#confirm-pwd");
             let $confirm_error = $("#confirm-error");
 
-            if ($password.val().length < 6 || $password.val().length > 15) {
+            //validate email field
+            if(!emailReg.test($email.val())){
+                $email_error.text("Please enter a valid email")
+                event.preventDefault();
+            } //validate password field
+            else if ($password.val().length < 6 || $password.val().length > 15) {
                 $error_pwd.text("Password must be between 6 to 12 letters");
                 event.preventDefault();
             }

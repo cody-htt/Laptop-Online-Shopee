@@ -61,10 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <small id="confirm-error" class="text-danger"></small>
                         </div>
                     </div>
-                    <div class="form-check form-check-inline font-size-16">
+                    <div class="form-check form-check-inline font-size-16 pt-1">
                         <input type="checkbox" name="agreement" class="form-check-input" required>
                         <label for="agreement" class="form-check-label font-rubik text-light"> I agree
-                            <a href="#" class="color-gold">term, conditions, and policy </a><span class="color-gold">*</span>
+                            <a href="#" class="color-selected">term, conditions, and policy </a><span class="color-gold">*</span>
                         </label>
                     </div>
                     <div class="submit-btn text-center my-5">
