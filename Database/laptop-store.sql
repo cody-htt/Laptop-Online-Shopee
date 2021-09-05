@@ -91,9 +91,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `user_email`, `user_password`, `profile_image`, `register_date`) VALUES
-(1, 'tung', 'huynh', 'tunghuynh@gmail.com', '$2y$10$gT7M50f.gH1OvHBEMOgU6uatr6q3PHd79tIKFY3A8hA8dMFKVUmNW', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:43:15'),
-(2, 'test6', 'account6', 'test6@account6.com', '$2y$10$Qk4/BxHbuvGzkCKCGGwOY.G0ZU3Qz7SsalobvNMmI/Iu1J45Ewhg.', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:44:27'),
-(3, 'tung2', 'huynh', 'tung2huynh@gmail.com', '$2y$10$.9XhJAGJE4V7VNZWDYY1VeTw63fzhhDyz3DbBXdbwczYhDZPhXBrS', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:44:57'),
+(1, 'tung1', 'huynh', 'tung1huynh@gmail.com', '$2y$10$gT7M50f.gH1OvHBEMOgU6uatr6q3PHd79tIKFY3A8hA8dMFKVUmNW', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:43:15'),
+(2, 'tung2', 'account6', 'tung2huynh@account6.com', '$2y$10$Qk4/BxHbuvGzkCKCGGwOY.G0ZU3Qz7SsalobvNMmI/Iu1J45Ewhg.', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:44:27'),
+(3, 'tung3', 'huynh', 'tung3huynh@gmail.com', '$2y$10$.9XhJAGJE4V7VNZWDYY1VeTw63fzhhDyz3DbBXdbwczYhDZPhXBrS', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:44:57'),
 (4, 'tung', 'testaccount', 'tung@gmail.com', '$2y$10$0v.HDo9BtMMZWNyUWkwIXOIy.ULzIldfs/AtuJ.wdt1ASDxHSl/z.', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:46:27'),
 (5, 'tung', 'huynh', '123@gmail.com', '$2y$10$budAXejRR8BWvwxu5hJPVu8HWkdxwTZRFbbglg2pfzl.7cTB5gCpK', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:48:58'),
 (6, 'tung', 'huynh', '123@gmail.com', '$2y$10$H6mXNgWOfNOxhTLSHZTs/eRWx/yQk2ILsIp.fshRS3n0dC0C7aEMy', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:50:57'),

@@ -11,9 +11,9 @@ body{
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(135deg,
-    #718093,
-    #353b48,
-    #2f3640);
+    #756C73,
+    #382732,
+    #23171F);
 }
 
 .container {
@@ -27,7 +27,7 @@ body{
 .container .box {
     position: relative;
     width: 370px;
-    height: 490px;
+    height: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@ body{
     border-radius: 8px;
     transform: skewX(20deg);
     transition: 0.5s;
-    filter: blur(40px);
+    filter: blur(1.8rem);
 }
 
 .container .box:hover:before,

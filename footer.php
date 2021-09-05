@@ -73,7 +73,6 @@
 
 <!-- Custom JavaScript-->
 <script src="js/index.js"></script>
-<script src="js/main.js"></script>
 </body>
 
 </html>

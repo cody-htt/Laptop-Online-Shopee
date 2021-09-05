@@ -68,7 +68,7 @@ if(empty($error)){
     } catch (Error $er) {
         print "Error: ". $er->getMessage();
     }
-    //Close my_sqli object
+
     if($init_statement_regist->affected_rows == 1){
         //start a new session
         session_start();
