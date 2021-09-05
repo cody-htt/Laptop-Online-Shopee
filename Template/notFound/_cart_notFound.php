@@ -28,7 +28,7 @@
                                 </span>
                             </span>
                         </h5>
-                        <button type="submit" class="btn btn-warning mt-3">Proceed to buy</button>
+                        <button type="submit" class="btn btn-warning mt-3">Place Order</button>
                     </div>
                 </div>
             </div>
