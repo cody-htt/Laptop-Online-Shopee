@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             </div>
                             <form method="POST">
                                 <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
-                                <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'] ?? '1'; ?>">
                                 <?php
                                 if (in_array($item['item_id'], $cart->getCartId($product->getData('cart')) ?? [])) {
                                     echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
