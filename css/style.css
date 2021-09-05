@@ -271,14 +271,16 @@ button, button:focus {
     --color-orange: #ff5e57;
 }
 
-#register, #login-form{
+#register{
     padding: 5% 0;
     background: url("../assets/avatar/background-3.jpg") no-repeat;
     background-size: cover;
 }
 
 #login-form{
-    padding: 10% !important;
+    padding: 10% 0;
+    background: url("../assets/avatar/background-2.jpg") no-repeat;
+    background-size: cover;
 }
 
 #register .color-primary {

@@ -134,7 +134,7 @@ $(document).ready(
         // Validation user register information
         $("#reg-form").submit(function (event) {
 
-            let emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;;
+            let emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             let $email = $("#email");
             let $email_error = $("#email-error");
             let $password = $("#password");

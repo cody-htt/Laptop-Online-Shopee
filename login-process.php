@@ -48,7 +48,7 @@ if(empty($error)){
         //verify user password
         if(password_verify($password, $row['user_password'])){
             printf($row['password']);
-            header("location: index.php");
+            header("location: user-info.php");
             exit();
         } else {
             print "You are not a member, please register";

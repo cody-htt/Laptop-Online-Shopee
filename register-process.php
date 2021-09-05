@@ -69,11 +69,10 @@ if(empty($error)){
         print "Error: ". $er->getMessage();
     }
     //Close my_sqli object
-    $init_statement_regist->close();
     if($init_statement_regist->affected_rows == 1){
-        $init_statement_regist->close();
         //start a new session
-        $_SESSION['userID'] = mysqli_insert_id($db->con);
+        session_start();
+        $_SESSION['user_id'] = mysqli_insert_id($db->con);
         header('location:login.php');
         exit();
     }

@@ -12,8 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('login-process.php');
 }
 
-if (isset($_SESSION['userID'])){
-    $user = get_user_info($db->con, $_SESSION['userID']);
+$user=array();
+if (isset($_SESSION['user_id'])){
+    $user = get_user_info($db->con, $_SESSION['user_id']);
 }
 ?>
 
