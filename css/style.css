@@ -188,7 +188,6 @@ button, button:focus {
 }
 
 #banner-adds h4 {
-    color: #fff;
     padding-top: 0.3em;
     position: relative;
     letter-spacing: 15px;
@@ -357,3 +356,29 @@ button, button:focus {
 }
 
 /* Custom CSS for registration and login */
+
+/* Header Glowing Button */
+#header span.glowing-text {
+    transform: translateX(-50%) translateY(-50%);
+    animation: glowing-text 2s linear infinite;
+}
+
+@keyframes glowing-text {
+    0%, 100% {
+        color: #ffffff;
+        filter: blur(0.1em);
+        text-shadow: 0 0 5px #00b3ff,
+                     0 0 10px #00b3ff,
+                     0 0 20px #00b3ff,
+                     0 0 40px #00b3ff;
+    }
+    5%, 95% {
+        color: #4b7bec;
+        filter: blur(0px);
+        text-shadow: 0 0 5px #00b3ff,
+                     0 0 10px #00b3ff,
+                     0 0 20px #00b3ff,
+                     0 0 40px #00b3ff;
+    }
+}
+/* Header Glowing Button */

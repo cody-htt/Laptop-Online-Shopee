@@ -60,11 +60,11 @@ if (isset($_SESSION['user_id'])) {
                     <?php
                     if (!empty($_SESSION['user_id'])){
                         echo "Welcome!"." ".$user['first_name']." ".$user['last_name'];
-                        echo '<a href="user-info.php" class="px-1 border-right p-text-color">Your Info</a>';
+                        echo '<a href="user-info.php" class="px-1 border-left p-text-color">&nbsp;Account Info</a>';
+                        echo '<a href="logout.php" class="px-1 border-left p-text-color">Logout</a>';
                     } else {
-                        echo '<a href="login.php" class="px-1 border-right p-text-color">Login</a>';
-                        echo '<a href="registration.php" class="px-1 border-right p-text-color">New Account?</a>';
-                        echo '<a href="user-info.php" class="px-1 border-right p-text-color">User Info</a>';
+                        echo '<a href="registration.php" class="px-1">
+                        <span class="glowing-text">Create New Account</span></a>';
                     }
                     ?>
                 </span>

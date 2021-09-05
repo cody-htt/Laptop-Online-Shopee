@@ -54,7 +54,7 @@ $in_cart = $cart->getCartId($product->getData('cart'));
                                     </div>
                                     <form method="post">
                                         <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
-                                        <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                        <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'] ?? '1'; ?>">
                                         <?php
                                         if (in_array($item['item_id'], $in_cart ?? [])) {
                                             echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
