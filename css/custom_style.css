@@ -104,9 +104,9 @@ body{
 .container .box:hover span#glass::before {
     top: -80px;
     left: 50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
     opacity: 1;
 }
 
@@ -124,33 +124,33 @@ body{
     transition: 0.5s;
     animation: animate-x 2.5s ease-in-out infinite;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    animation-delay: -1s;
+    animation-delay: -0.75s;
 }
 
 .container .box:hover span#glass::after {
     bottom: -90px;
     right: 45px;
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
     opacity: 1;
 }
 
 @keyframes animate-y {
     0%, 100% {
-        transform: translateY(12px);
+        transform: translateY(13px);
     }
     50% {
-        transform: translateY(-12px);
+        transform: translateY(-13px);
     }
 }
 
 @keyframes animate-x {
     0%, 100% {
-        transform: translateX(12px);
+        transform: translateX(13px);
     }
     50% {
-        transform: translateX(-12px);
+        transform: translateX(-13px);
     }
 }
 

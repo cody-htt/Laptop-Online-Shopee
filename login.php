@@ -9,6 +9,7 @@ require ('register-helper.php');
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    session_start();
     require('login-process.php');
 }
 

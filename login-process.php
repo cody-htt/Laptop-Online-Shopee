@@ -47,8 +47,7 @@ if(empty($error)){
     if (!empty($row)){
         //verify user password
         if(password_verify($password, $row['user_password'])){
-//            session_start();
-//            $_SESSION['user_id'] = mysqli_insert_id($db->con);
+            $_SESSION['user_id'] = $row['user_id'];
             header("location: index.php");
             exit();
         } else {
