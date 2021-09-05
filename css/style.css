@@ -201,9 +201,10 @@ button, button:focus {
     0 0 10px #ff7bac,
     0 0 20px #ff7bac,
     0 0 40px #ff7bac,
-    0 0 60px #fc5c65,
-    0 0 80px #fc5c65,
-    0 0 100px #fc5c65;
+    0 0 60px #ff7675,
+    0 0 80px #ff7675,
+    0 0 100px #fc5c65,
+    0 0 120px #fc5c65;
     animation: blinking 2.5s linear infinite;
 }
 
@@ -270,14 +271,16 @@ button, button:focus {
     --color-orange: #ff5e57;
 }
 
-#register, #login-form{
+#register{
     padding: 5% 0;
     background: url("../assets/avatar/background-3.jpg") no-repeat;
     background-size: cover;
 }
 
 #login-form{
-    padding: 10% !important;
+    padding: 10% 0;
+    background: url("../assets/avatar/background-2.jpg") no-repeat;
+    background-size: cover;
 }
 
 #register .color-primary {

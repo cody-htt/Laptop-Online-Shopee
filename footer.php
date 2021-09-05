@@ -45,7 +45,7 @@
     </div>
 </footer>
 <div class="copyright text-center bg-dark text-white py-2">
-    <p class="font-roboto font-size-14">&copy;Copyrights 2020, Design by <a href="#" class="color-second">Tung Huynh</a>
+    <p class="font-roboto font-size-14">&copy;Copyrights 2021, Design by <a href="#" class="color-second">Tung Huynh</a>
     </p>
 </div>
 <!-- !start #footer -->
