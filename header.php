@@ -31,8 +31,20 @@
     <?php
     //Connect to MySQLi
     require('functions.php');
+    //Start user session
+    session_start();
     ?>
 </head>
+
+<?php
+//Call for register-helper
+require('register-helper.php');
+
+$user = array();
+if (isset($_SESSION['user_id'])) {
+    $user = get_user_info($db->con, $_SESSION['user_id']);
+}
+?>
 
 <body>
 
@@ -45,9 +57,16 @@
         </div>
         <div class="col-md-4 offset-md-3 text-right">
                 <span class="font-roboto font-size-14">
-                    <a href="login.php" class="px-1 border-right p-text-color">Login</a>
-                    <a href="registration.php" class="px-1 border-right p-text-color">New Account?</a>
-                    <a href="user-info.php" class="px-1 border-right p-text-color">User Info</a>
+                    <?php
+                    if (!empty($_SESSION['user_id'])){
+                        echo "Welcome!"." ".$user['first_name']." ".$user['last_name'];
+                        echo '<a href="user-info.php" class="px-1 border-right p-text-color">Your Info</a>';
+                    } else {
+                        echo '<a href="login.php" class="px-1 border-right p-text-color">Login</a>';
+                        echo '<a href="registration.php" class="px-1 border-right p-text-color">New Account?</a>';
+                        echo '<a href="user-info.php" class="px-1 border-right p-text-color">User Info</a>';
+                    }
+                    ?>
                 </span>
         </div>
     </div>

@@ -47,8 +47,9 @@ if(empty($error)){
     if (!empty($row)){
         //verify user password
         if(password_verify($password, $row['user_password'])){
-            printf($row['password']);
-            header("location: user-info.php");
+//            session_start();
+//            $_SESSION['user_id'] = mysqli_insert_id($db->con);
+            header("location: index.php");
             exit();
         } else {
             print "You are not a member, please register";
