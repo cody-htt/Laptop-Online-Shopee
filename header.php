@@ -59,8 +59,9 @@ if (isset($_SESSION['user_id'])) {
                 <span class="font-roboto font-size-14">
                     <?php
                     if (!empty($_SESSION['user_id'])){
-                        echo "Welcome!"." ".$user['first_name']." ".$user['last_name'];
-                        echo '<a href="user-info.php" class="px-1 border-left p-text-color">&nbsp;Account Info</a>';
+                        echo "Welcome!"." ".$user['first_name']." ".$user['last_name']." ";
+                        echo '<a href="user-info.php" class="px-1 border-left p-text-color">
+                        <em class="fa fa-user" aria-hidden="true"></em>&nbsp;Account Info</a>';
                         echo '<a href="logout.php" class="px-1 border-left p-text-color">Logout</a>';
                     } else {
                         echo '<a href="registration.php" class="px-1">
