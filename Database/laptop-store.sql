@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2021 at 12:44 PM
+-- Generation Time: Sep 06, 2021 at 05:08 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `test`
+-- Database: `laptop-store`
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
--- Creation: Sep 06, 2021 at 10:42 AM
+-- Creation: Sep 06, 2021 at 10:45 AM
 --
 
 CREATE TABLE `admin` (
@@ -47,7 +47,7 @@ CREATE TABLE `admin` (
 --
 -- Table structure for table `cart`
 --
--- Creation: Sep 06, 2021 at 10:42 AM
+-- Creation: Sep 06, 2021 at 02:38 PM
 --
 
 CREATE TABLE `cart` (
@@ -62,6 +62,8 @@ CREATE TABLE `cart` (
 --       `user` -> `user_id`
 --   `item_id`
 --       `product` -> `item_id`
+--   `cart_id`
+--       `order-detail` -> `cart_id`
 --
 
 -- --------------------------------------------------------
@@ -69,7 +71,7 @@ CREATE TABLE `cart` (
 --
 -- Table structure for table `category`
 --
--- Creation: Sep 06, 2021 at 10:42 AM
+-- Creation: Sep 06, 2021 at 10:45 AM
 --
 
 CREATE TABLE `category` (
@@ -94,9 +96,35 @@ INSERT INTO `category` (`brand_id`, `brand_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `order-detail`
+--
+-- Creation: Sep 06, 2021 at 02:40 PM
+--
+
+CREATE TABLE `order-detail` (
+  `order_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `customer` int(11) NOT NULL,
+  `shipping_add` int(11) DEFAULT NULL,
+  `item_qty` int(11) NOT NULL,
+  `subtotal` double(10,2) DEFAULT NULL,
+  `order_status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `order-detail`:
+--   `item_id`
+--       `product` -> `brand_id`
+--
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
--- Creation: Sep 06, 2021 at 10:42 AM
+-- Creation: Sep 06, 2021 at 10:45 AM
 --
 
 CREATE TABLE `product` (
@@ -149,7 +177,7 @@ INSERT INTO `product` (`item_id`, `brand_id`, `item_brand`, `item_name`, `item_d
 --
 -- Table structure for table `user`
 --
--- Creation: Sep 06, 2021 at 10:42 AM
+-- Creation: Sep 06, 2021 at 02:38 PM
 --
 
 CREATE TABLE `user` (
@@ -164,6 +192,8 @@ CREATE TABLE `user` (
 
 --
 -- RELATIONSHIPS FOR TABLE `user`:
+--   `user_id`
+--       `order-detail` -> `user_id`
 --
 
 -- --------------------------------------------------------
@@ -171,7 +201,7 @@ CREATE TABLE `user` (
 --
 -- Table structure for table `wishlist`
 --
--- Creation: Sep 06, 2021 at 10:42 AM
+-- Creation: Sep 06, 2021 at 10:45 AM
 --
 
 CREATE TABLE `wishlist` (
@@ -209,6 +239,15 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`brand_id`);
 
 --
+-- Indexes for table `order-detail`
+--
+ALTER TABLE `order-detail`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `item_id` (`item_id`),
+  ADD KEY `cart_id` (`cart_id`);
+
+--
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
@@ -238,6 +277,12 @@ ALTER TABLE `category`
   MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `order-detail`
+--
+ALTER TABLE `order-detail`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
@@ -258,13 +303,26 @@ ALTER TABLE `user`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `product` (`item_id`);
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `product` (`item_id`),
+  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `order-detail` (`cart_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `order-detail`
+--
+ALTER TABLE `order-detail`
+  ADD CONSTRAINT `order-detail_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `product` (`brand_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`brand_id`) REFERENCES `category` (`brand_id`);
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `order-detail` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
