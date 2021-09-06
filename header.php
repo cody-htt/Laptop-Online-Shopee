@@ -56,19 +56,19 @@ if (isset($_SESSION['user_id'])) {
             <p class="font-roboto font-size-14 text-black-40 m-0">FPT Greenwich - Tung Huynh - Demo Ecom</p>
         </div>
         <div class="col-md-4 offset-md-3 text-right">
-                <span class="font-roboto font-size-14">
-                    <?php
-                    if (!empty($_SESSION['user_id'])){
-                        echo "Welcome!"." ".$user['first_name']." ".$user['last_name']." ";
-                        echo '<a href="user-info.php" class="px-1 border-left p-text-color">
-                        <em class="fa fa-user" aria-hidden="true"></em>&nbsp;Account Info</a>';
-                        echo '<a href="logout.php" class="px-1 border-left p-text-color">Logout</a>';
-                    } else {
-                        echo '<a href="registration.php" class="px-1">
-                        <span class="glowing-text">Create New Account</span></a>';
-                    }
-                    ?>
-                </span>
+            <span class="font-roboto font-size-14">
+                <?php
+                if (!empty($_SESSION['user_id'])){
+                    echo "Welcome!"." ".$user['first_name']." ".$user['last_name']." ";
+                    echo '<a href="user-info.php" class="px-1 border-left p-text-color">
+                    <em class="fa fa-user" aria-hidden="true"></em>&nbsp;Account Info</a>';
+                    echo '<a href="logout.php" class="px-1 border-left p-text-color">Logout</a>';
+                } else {
+                    echo '<a href="registration.php" class="px-1">
+                    <span class="glowing-text">Create New Account</span></a>';
+                }
+                ?>
+            </span>
         </div>
     </div>
 
