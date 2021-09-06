@@ -150,7 +150,7 @@ foreach ($product->getData() as $item):
                                         <button class="btn p-0 font-roboto font-size-14">8GB DDR4 Ram</button>
                                     </div>
                                     <div class="font-rubik bg-info border p-2">
-                                        <button class="btn p-0 text-light font-roboto font-size-14">16GB DDR4 Ram</button>
+                                        <button class="btn p-0 text-light font-roboto font-size-14"><?php echo $item['item_memory'] ?? "8Gb Memory"; ?></button>
                                     </div>
                                     <div class="font-rubik border p-2">
                                         <button class="btn p-0 font-roboto font-size-14">32GB DDR4 Ram</button>
@@ -162,7 +162,7 @@ foreach ($product->getData() as $item):
                                         <button class="btn p-0 font-roboto font-size-14">Intel Core i5</button>
                                     </div>
                                     <div class="font-rubik bg-info border p-2">
-                                        <button class="btn p-0 text-light font-roboto font-size-14">Intel Core i7</button>
+                                        <button class="btn p-0 text-light font-roboto font-size-14"><?php echo $item['item_cpu'] ?? "Intel i3"; ?></button>
                                     </div>
                                     <div class="font-rubik border p-2">
                                         <button class="btn p-0 font-roboto font-size-14">AMD Ryzen 7</button>
@@ -174,7 +174,7 @@ foreach ($product->getData() as $item):
                                         <button class="btn p-0 font-roboto font-size-14">Nvidia GTX 2070</button>
                                     </div>
                                     <div class="font-rubik bg-info border p-2">
-                                        <button class="btn p-0 text-light font-roboto font-size-14">Nvidia GTX 2080</button>
+                                        <button class="btn p-0 text-light font-roboto font-size-14"><?php echo $item['item_gpu'] ?? "Not Have"; ?></button>
                                     </div>
                                     <div class="font-rubik border p-2">
                                         <button class="btn p-0 font-roboto font-size-14">Radeon RX 6800</button>
@@ -185,7 +185,7 @@ foreach ($product->getData() as $item):
                                 <h6 class="font-baloo">Hard Drive:</h6>
                                 <div class="d-flex justify-content-around w-70 pt-1">
                                     <div class="font-rubik border p-2">
-                                        <button class="btn p-0 font-roboto font-size-14">250GB SSD + 1TB HDD</button>
+                                        <button class="btn p-0 font-roboto font-size-14"><?php echo $item['item_drive'] ?? "500Gb HDD"; ?></button>
                                     </div>
                                     <div class="font-rubik bg-warning border p-2">
                                         <button class="btn p-0 font-roboto font-size-14">2x 500GB Nvme</button>
@@ -200,7 +200,7 @@ foreach ($product->getData() as $item):
                                         <button class="btn p-0 font-roboto font-size-14">FHD (300FPS)</button>
                                     </div>
                                     <div class="font-rubik bg-warning border p-2">
-                                        <button class="btn p-0 font-roboto font-size-14">QHD (240FPS)</button>
+                                        <button class="btn p-0 font-roboto font-size-14"><?php echo $item['item_monitor'] ?? "FHD-60Fps"; ?></button>
                                     </div>
                                     <div class="font-rubik border p-2">
                                         <button class="btn p-0 font-roboto font-size-14">UHD (60FPS)</button>
@@ -215,7 +215,7 @@ foreach ($product->getData() as $item):
                                         <button class="btn p-0 font-roboto font-size-14">Win10 Home</button>
                                     </div>
                                     <div class="font-rubik bg-warning border p-2">
-                                        <button class="btn p-0 font-roboto font-size-14">Win10 Pro</button>
+                                        <button class="btn p-0 font-roboto font-size-14"><?php echo $item['item_os'] ?? "Free Dos"; ?></button>
                                     </div>
                                 </div>
                             </div>
@@ -226,24 +226,9 @@ foreach ($product->getData() as $item):
                     <div class="col-12 pt-4">
                         <h6 class="font-baloo"> Product Description</h6>
                         <hr>
-                        <p class="font-roboto font-size-14 p-text-color text-justify">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolores quis quia vitae
-                            quos nesciunt quod modi. Blanditiis sunt non veniam praesentium eaque autem commodi molestias, iste delectus
-                            vitae, labore ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis quia vitae
-                            quos nesciunt quod modi. Blanditiis sunt non veniam praesentium eaque autem commodi molestias, iste delectus
-                            vitae, labore ipsa.</p>
-                        <p class="font-roboto font-size-14 p-text-color text-justify">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolores quis quia vitae
-                            quos nesciunt quod modi. Blanditiis sunt non veniam praesentium eaque autem commodi molestias, iste delectus
-                            vitae, labore ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis quia vitae
-                            quos nesciunt quod modi. Blanditiis sunt non veniam praesentium eaque autem commodi molestias, iste delectus
-                            vitae, labore ipsa.</p>
-                        <p class="font-roboto font-size-14 p-text-color text-justify">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolores quis quia vitae
-                            quos nesciunt quod modi. Blanditiis sunt non veniam praesentium eaque autem commodi molestias, iste delectus
-                            vitae, labore ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis quia vitae
-                            quos nesciunt quod modi. Blanditiis sunt non veniam praesentium eaque autem commodi molestias, iste delectus
-                            vitae, labore ipsa.</p>
+                        <p class="font-roboto font-size-16 p-text-color text-justify">
+                            <?php echo $item['item_desc'] ?? "Not Update Yet"; ?>
+                        </p>
                     </div>
                 </div>
             </div>
