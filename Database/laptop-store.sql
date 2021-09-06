@@ -53,15 +53,16 @@ CREATE TABLE `admin` (
 CREATE TABLE `cart` (
   `cart_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `item_id` int(11) NOT NULL
+  `total_price` double(10,2) NOT NULL,
+  `shipping_add` varchar(255) DEFAULT NULL,
+  `cart_status` varchar(50) NOT NULL,
+  `buy_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- RELATIONSHIPS FOR TABLE `cart`:
 --   `user_id`
 --       `user` -> `user_id`
---   `item_id`
---       `product` -> `item_id`
 --   `cart_id`
 --       `order-detail` -> `cart_id`
 --
@@ -104,12 +105,8 @@ INSERT INTO `category` (`brand_id`, `brand_name`) VALUES
 CREATE TABLE `order-detail` (
   `order_id` int(11) NOT NULL,
   `cart_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,
-  `customer` int(11) NOT NULL,
-  `shipping_add` int(11) DEFAULT NULL,
   `item_qty` int(11) NOT NULL,
-  `subtotal` double(10,2) DEFAULT NULL,
   `order_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -229,7 +226,6 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`),
-  ADD KEY `item_id` (`item_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
@@ -243,7 +239,6 @@ ALTER TABLE `category`
 --
 ALTER TABLE `order-detail`
   ADD PRIMARY KEY (`order_id`),
-  ADD KEY `user_id` (`user_id`),
   ADD KEY `item_id` (`item_id`),
   ADD KEY `cart_id` (`cart_id`);
 
@@ -302,9 +297,8 @@ ALTER TABLE `user`
 -- Constraints for table `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `product` (`item_id`),
-  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `order-detail` (`cart_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`cart_id`) REFERENCES `order-detail` (`cart_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `order-detail`
@@ -317,12 +311,6 @@ ALTER TABLE `order-detail`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`brand_id`) REFERENCES `category` (`brand_id`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `order-detail` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
