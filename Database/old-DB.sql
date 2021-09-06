@@ -303,15 +303,15 @@ ALTER TABLE `user`
 --
 ALTER TABLE `cart`
     ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `product` (`item_id`),
-  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `order-detail` (`cart_id`);
+    ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `product` (`item_id`);
 
 --
 -- Constraints for table `order-detail`
 --
 ALTER TABLE `order-detail`
     ADD CONSTRAINT `order-detail_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `product` (`brand_id`),
-    ADD CONSTRAINT `order-detail_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+    ADD CONSTRAINT `order-detail_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+    ADD CONSTRAINT `order-detail_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`);
 
 --
 -- Constraints for table `product`
