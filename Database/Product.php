@@ -28,6 +28,19 @@ class Product
         return $productsArray;
     }
 
+    public function getItemBrand(string $categoryTable = 'category')
+    {
+        $query_brand = $this->db->con->query("SELECT * FROM {$categoryTable}" );
+        $categoryArray = array();
+
+        //Import brand_name to categoryArray
+        while ($item = mysqli_fetch_array($query_brand, MYSQLI_ASSOC)){
+            $categoryArray[] = $item;
+        }
+
+        return $categoryArray;
+    }
+
     //get product from cart table in database
     public function getProductFromCart($item_id = null, $productTable = 'product')
     {
