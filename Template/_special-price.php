@@ -1,8 +1,8 @@
 <!-- Special Price -->
 <?php
 $product_brand = array_map(function ($pro) {
-    return $pro['item_brand'];
-}, $product_import);
+    return $pro['brand_name'];
+}, $item_brand);
 $new_brand = array_unique($product_brand);
 sort($new_brand);
 shuffle($product_import);
