@@ -297,14 +297,15 @@ ALTER TABLE `user`
 -- Constraints for table `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`cart_id`) REFERENCES `order-detail` (`cart_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
 
 --
 -- Constraints for table `order-detail`
 --
 ALTER TABLE `order-detail`
-  ADD CONSTRAINT `order-detail_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `product` (`brand_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `order-detail_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `product` (`brand_id`),
+  ADD CONSTRAINT `order-detail_ibfk_2` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`);
 
 --
 -- Constraints for table `product`
