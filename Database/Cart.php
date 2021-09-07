@@ -83,7 +83,7 @@ class Cart
         if (isset($price_array)) {
             $sum = 0;
             foreach ($price_array as $item) {
-                $sum += floatval($item[0]);
+                $sum += floatval($item);
             }
             return sprintf('%.2f', $sum);
         }

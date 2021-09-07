@@ -8,44 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 
-//Save item_id in $_SESSION['Cart']
-if(isset($_POST['product-submit'])){
-    //  print_r($_POST['item_id']);
-    if(isset($_SESSION['cart'])){
-        $item_array_id = array_column($_SESSION['cart'], "product_id");
-
-        //Check if item is already added to cart
-        if(in_array($_POST['item_id'], $item_array_id)){
-            echo "<script>window.alert('Product is already in the cart')</script>";
-            echo "<script>window.localtion = 'index.php'</script>";
-        } else {
-            $count = count($_SESSION['cart']);
-            $item_array = array(
-                'product_id' => $_POST['item_id']
-            );
-
-            $_SESSION['cart'][$count] = $item_array;
-            $link = "http" . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-            //reload current page
-            if ($link == "http://localhost:81/Project-php/Laptop%20Online%20Shopee/product.php?" . "item_id={$_POST['item_id']}") {
-                header($link);
-            } else {
-                header("Location:" . $_SERVER['PHP_SELF']);
-            }
-            print_r($_SESSION['cart']);
-        }
-
-    } else {
-        $item_array = array(
-            'product_id' => $_POST['item_id']
-        );
-
-        //Create Session variable
-        $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
-    }
-}
-
 $item_id = $_GET['item_id'] ?? 1;
 foreach ($product->getData() as $item):
     if ($item['item_id'] == $item_id):

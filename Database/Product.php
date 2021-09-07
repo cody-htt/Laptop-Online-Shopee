@@ -28,6 +28,14 @@ class Product
         return $productsArray;
     }
 
+    public function getProductInCart(string $productTable = 'product'){
+        $query_item = "SELECT * FROM $productTable";
+
+        $result = mysqli_query($this->db->con,$query_item);
+
+        return $result;
+    }
+
     public function getItemBrand(string $categoryTable = 'category')
     {
         $query_brand = $this->db->con->query("SELECT * FROM {$categoryTable}" );

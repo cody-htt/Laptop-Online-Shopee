@@ -105,7 +105,8 @@ if (isset($_SESSION['user_id'])) {
             <form action="#" class="font-size-14 font-roboto">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
                     <span class="font-size-16 px-2 text-white"><em class="fas fa-shopping-cart"></em></span>
-                    <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+                    <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?></span>
+<!--                    <span class="px-3 py-2 rounded-pill text-dark bg-light">--><?php //echo count($product->getData('cart')); ?><!--</span>-->
                 </a>
             </form>
         </div>
