@@ -38,6 +38,9 @@ CREATE TABLE `admin` (
   `register_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `admin` (`admin_id`, `first_name`, `last_name`, `ad_user`, `ad_password`, `register_date`) VALUES
+(1, 'admin', 'admin', 'admin', '123456', '2021-09-01 01:43:15' );
+
 --
 -- RELATIONSHIPS FOR TABLE `admin`:
 --
@@ -169,6 +172,11 @@ INSERT INTO `product` (`item_id`, `brand_id`, `item_brand`, `item_name`, `item_d
 (14, 4, 'Lenovo', 'Lenovo Ideapad slim3', 'While it may be priced as an everyday-use laptop, the IdeaPad 3 (15, AMD) is something much more. Up to an AMD Ryzen™ 7 4700U Mobile Processor—bolstered by powerful memory, storage, and graphics options—means this device delivers beyond expectations. What', '16GB DDR4 Memory', 'Intel Core i5', 'Nvidia GTX 1080', '250GB SSD + 1TB HDD', 'QHD-240Fps', 'Win10 Home', 1549.00, './assets/Lenovo/lenovo_ideapad_slim_3_14_blue.jpg', '2021-08-30 12:08:57', 1649.00),
 (15, 4, 'Lenovo', 'Lenovo Ideapad slim4', 'Do not be fooled by the stylish good looks of the IdeaPad 1 14” laptop—with lots of storage options, an FHD panel framed by narrow bezels, and the latest AMD processing, it’s as powerful on the inside as it is colorful on the outside. All-day battery life ', '8GB DDR4 Memory', 'Intel Core i5', 'Nvidia GTX 1080', '250GB SSD + 1TB HDD', 'QHD-240Fps', 'Free DOS', 1599.00, './assets/Lenovo/lenovo_ideapad_slim_3_14iil05.jpg', '2021-08-30 12:08:57', 1899.00);
 
+
+
+
+
+
 -- --------------------------------------------------------
 
 --
@@ -192,6 +200,19 @@ CREATE TABLE `user` (
 --   `user_id`
 --       `order-detail` -> `user_id`
 --
+
+INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `user_email`, `user_password`, `profile_image`, `register_date`) VALUES
+(1, 'tung', 'huynh', 'tunghuynh@gmail.com', '$2y$10$gT7M50f.gH1OvHBEMOgU6uatr6q3PHd79tIKFY3A8hA8dMFKVUmNW', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:43:15'),
+(2, 'test6', 'account6', 'test6@account6.com', '$2y$10$Qk4/BxHbuvGzkCKCGGwOY.G0ZU3Qz7SsalobvNMmI/Iu1J45Ewhg.', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:44:27'),
+(3, 'tung2', 'huynh', 'tung2huynh@gmail.com', '$2y$10$.9XhJAGJE4V7VNZWDYY1VeTw63fzhhDyz3DbBXdbwczYhDZPhXBrS', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:44:57'),
+(4, 'tung', 'testaccount', 'tung@gmail.com', '$2y$10$0v.HDo9BtMMZWNyUWkwIXOIy.ULzIldfs/AtuJ.wdt1ASDxHSl/z.', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:46:27'),
+(5, 'tung', 'huynh', '123@gmail.com', '$2y$10$budAXejRR8BWvwxu5hJPVu8HWkdxwTZRFbbglg2pfzl.7cTB5gCpK', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:48:58'),
+(6, 'tung', 'huynh', '123@gmail.com', '$2y$10$H6mXNgWOfNOxhTLSHZTs/eRWx/yQk2ILsIp.fshRS3n0dC0C7aEMy', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:50:57'),
+(7, 'tung', 'huynh22', 'tung@123.com', '$2y$10$aG9KyXVGlBG65giXysB82OowTjqfxCGFdzZG0/6mRIyjveHZc2j1m', './assets/user_avatar/demo-avatar.png', '2021-09-01 01:52:48'),
+(8, 'tung22', 'huynh22', 'tutung22ng@123.com', '$2y$10$4M9i2mm6NGgTR4wQCDsTK.WNm0IyuIM4VXOtyo8GZhC9U5twLOMTC', './assets/user_avatar/image_2021_07_16T15_18_52_160Z.png', '2021-09-01 01:53:29'),
+(9, 'tung', 'huynh', 'tunghuynh123@gmail.com', '$2y$10$A2fzJ5dUorp125DGaCCW.OMExuqLa8hnXow05E7pghZxnzC8AbZY6', './assets/user_avatar/demo-avatar.png', '2021-09-01 02:02:32'),
+(10, 'HUYNH', 'TUNG', 'tunghuynh1996@gmail.com', '$2y$10$WZ2qd5/Oi02vWnDVLarbreqY0qpxhm/R3WmmeeMNd/l79ZPjsWIFS', './assets/user_avatar/code-wallpaper-8.jpg', '2021-09-01 04:01:26');
+
 
 -- --------------------------------------------------------
 
@@ -313,6 +334,9 @@ ALTER TABLE `order-detail`
 ALTER TABLE `product`
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`brand_id`) REFERENCES `category` (`brand_id`);
 COMMIT;
+
+
+ALTER TABLE `admin` MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

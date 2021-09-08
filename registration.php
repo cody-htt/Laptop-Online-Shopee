@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p class="p-1 m-0 font-roboto font-size-16 color-primary">Register and enjoy your shopping</p>
                 <span class="font-roboto color-primary">Already have account? <a href="login.php">Login</a></span>
             </div>
+
             <div class="upload-profile-image d-flex justify-content-center pb-5">
                 <div class="text-center">
                     <small id="avatar-text" class="form-text font-rubik text-light">Choose Your Avatar</small>
@@ -29,6 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="file" form="reg-form" class="form-control-file" name="profileUpload" id="upload-profile">
                 </div>
             </div>
+
+            
             <div class="d-flex justify-content-center">
                 <form action="registration.php" method="POST" enctype="multipart/form-data" id="reg-form">
                     <div class="form-row">
