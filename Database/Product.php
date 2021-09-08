@@ -49,7 +49,7 @@ class Product
         return $categoryArray;
     }
 
-    //get product from cart table in database
+    //Get product from cart table in database
     public function getProductFromCart($item_id = null, $productTable = 'product')
     {
         if (isset($item_id)) {

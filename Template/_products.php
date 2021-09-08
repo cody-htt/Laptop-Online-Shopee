@@ -32,7 +32,7 @@ if(isset($_POST['product-submit'])){
             } else {
                 header("Location:" . $_SERVER['PHP_SELF']);
             }
-            print_r($_SESSION['cart']);
+            //print_r($_SESSION['cart']);
         }
 
     } else {
@@ -42,7 +42,7 @@ if(isset($_POST['product-submit'])){
 
         //Create Session variable
         $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
+        //print_r($_SESSION['cart']);
     }
 }
 

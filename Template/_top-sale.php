@@ -27,7 +27,7 @@ if(isset($_POST['top-sale-submit'])){
 
             $_SESSION['cart'][$count] = $item_array;
             header("Location:" . $_SERVER['PHP_SELF']);
-            print_r($_SESSION['cart']);
+            //print_r($_SESSION['cart']);
         }
 
     } else {
@@ -37,7 +37,7 @@ if(isset($_POST['top-sale-submit'])){
 
         //Create Session variable
         $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
+        //print_r($_SESSION['cart']);
     }
 }
 ?>
