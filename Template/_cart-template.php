@@ -1,6 +1,6 @@
 <!-- Shopping Cart Section -->
 <?php
-require ('php/component.php');
+require('php/component.php');
 ?>
 
 
@@ -30,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $subtotal[] = array();
                 $i = 0;
                 $result = $product->getProductInCart();
-                while ($row = mysqli_fetch_assoc($result)){
-                    foreach ($product_id as $id){
-                        if($row['item_id'] == $id){
+                while ($row = mysqli_fetch_assoc($result)) {
+                    foreach ($product_id as $id) {
+                        if ($row['item_id'] == $id) {
                             cartElement($row['item_image'], $row['item_name'], $row['item_brand'], $row['item_price'], $row['item_id']);
                             $subtotal[$i] = $row['item_price'];
                             $i++;

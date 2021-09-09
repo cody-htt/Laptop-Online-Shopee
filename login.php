@@ -4,7 +4,7 @@ session_start();
 require('registration_header.php');
 
 //Call for register-helper
-require ('register-helper.php');
+require('register-helper.php');
 ?>
 
 <?php
@@ -13,8 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('login-process.php');
 }
 
-$user=array();
-if (isset($_SESSION['user_id'])){
+$user = array();
+if (isset($_SESSION['user_id'])) {
     $user = get_user_info($db->con, $_SESSION['user_id']);
 }
 ?>

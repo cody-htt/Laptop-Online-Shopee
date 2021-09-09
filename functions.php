@@ -32,14 +32,14 @@ $cart = new Cart($db);
 
 //Initial Users object
 $user = new Users($db);
-$user_import = $user -> getData();
+$user_import = $user->getData();
 
 
 //Initial Categories object
 $categories = new Categories($db);
-$categories_import = $categories -> getData();
+$categories_import = $categories->getData();
 
 
 //Initial User-Admin object
 $usersAdmin = new UsersAdmin($db);
-$usersAdmin_import = $usersAdmin -> getData();
+$usersAdmin_import = $usersAdmin->getData();

@@ -28,21 +28,22 @@ class Product
         return $productsArray;
     }
 
-    public function getProductInCart(string $productTable = 'product'){
+    public function getProductInCart(string $productTable = 'product')
+    {
         $query_item = "SELECT * FROM $productTable";
 
-        $result = mysqli_query($this->db->con,$query_item);
+        $result = mysqli_query($this->db->con, $query_item);
 
         return $result;
     }
 
     public function getItemBrand(string $categoryTable = 'category')
     {
-        $query_brand = $this->db->con->query("SELECT * FROM {$categoryTable}" );
+        $query_brand = $this->db->con->query("SELECT * FROM {$categoryTable}");
         $categoryArray = array();
 
         //Import brand_name to categoryArray
-        while ($item = mysqli_fetch_array($query_brand, MYSQLI_ASSOC)){
+        while ($item = mysqli_fetch_array($query_brand, MYSQLI_ASSOC)) {
             $categoryArray[] = $item;
         }
 

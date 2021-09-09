@@ -13,20 +13,6 @@ class Cart
     }
 
     //Add item into cart table
-    public function insertIntoDatabase($params = null, $cartTable = 'cart')
-    {
-        if ($this->db->con != null) {
-            if ($params != null) {
-                $tableColumn = implode(',', array_keys($params));
-                $columnValues = implode(',', array_values($params));
-
-                //Query string
-                $query_string = sprintf("INSERT INTO %s(%s) VALUES(%s)", $cartTable, $tableColumn, $columnValues);
-
-                return $this->db->con->query($query_string);
-            }
-        }
-    }
 
     public function addToCart($userid, $itemid)
     {
@@ -51,7 +37,23 @@ class Cart
         }
     }
 
+    public function insertIntoDatabase($params = null, $cartTable = 'cart')
+    {
+        if ($this->db->con != null) {
+            if ($params != null) {
+                $tableColumn = implode(',', array_keys($params));
+                $columnValues = implode(',', array_values($params));
+
+                //Query string
+                $query_string = sprintf("INSERT INTO %s(%s) VALUES(%s)", $cartTable, $tableColumn, $columnValues);
+
+                return $this->db->con->query($query_string);
+            }
+        }
+    }
+
     //Delete item from cart table
+
     public function deleteCart($item_id = null, $cartTable = 'cart')
     {
         if ($item_id != null) {

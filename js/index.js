@@ -143,41 +143,39 @@ $(document).ready(
             let $confirm_error = $("#confirm-error");
 
             //validate email field
-            if(!emailReg.test($email.val())){
+            if (!emailReg.test($email.val())) {
                 $email_error.text("Please enter a valid email")
                 event.preventDefault();
             } //validate password field
             else if ($password.val().length < 6 || $password.val().length > 15) {
                 $error_pwd.text("Password must be between 6 to 12 letters");
                 event.preventDefault();
-            }
-            else if ($password.val() != $confirm.val()) {
+            } else if ($password.val() != $confirm.val()) {
                 $confirm_error.text("Password is not match");
                 event.preventDefault();
-            }
-            else {
+            } else {
                 return true;
             }
         });
 
         //Upload profile avatar
         let $uploadFile = $('#register .upload-profile-image input[type="file"]');
-        $uploadFile.change(function (){
+        $uploadFile.change(function () {
             readURL(this);
         });
 
     });
 
 // Create readURL function to let user upload image
-function readURL(input){
+function readURL(input) {
     let $chooseFile = $("#register .upload-profile-image .img");
     let $camera_icon = $("#register .upload-profile-image .camera-icon");
     let $avatar_text = $("#register .upload-profile-image #avatar-text");
-    if(input.files && input.files[0]){
+    if (input.files && input.files[0]) {
         let reader = new FileReader();
-        reader.onload = function(e){
+        reader.onload = function (e) {
             $chooseFile.attr('src', e.target.result);
-            $camera_icon.css({display:"none"});
+            $camera_icon.css({display: "none"});
             $avatar_text.text('You are cute!!!');
         }
 

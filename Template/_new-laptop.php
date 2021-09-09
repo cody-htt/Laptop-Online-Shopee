@@ -11,13 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 //Save item_id in $_SESSION['Cart']
-if(isset($_POST['new-laptop-submit'])){
+if (isset($_POST['new-laptop-submit'])) {
     //  print_r($_POST['item_id']);
-    if(isset($_SESSION['cart'])){
+    if (isset($_SESSION['cart'])) {
         $item_array_id = array_column($_SESSION['cart'], "product_id");
 
         //Check if item is already added to cart
-        if(in_array($_POST['item_id'], $item_array_id)){
+        if (in_array($_POST['item_id'], $item_array_id)) {
             echo "<script>window.alert('Product is already in the cart')</script>";
             echo "<script>window.localtion = 'index.php'</script>";
         } else {

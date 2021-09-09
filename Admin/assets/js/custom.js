@@ -1,6 +1,3 @@
-
-
-
 /*=============================================================
     Authour URI: www.binarycart.com
     License: Commons Attribution 3.0
@@ -198,8 +195,8 @@
                 hideHover: 'auto',
                 resize: true
             });
-           
-     
+
+
         },
 
         initialization: function () {

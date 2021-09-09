@@ -1,40 +1,36 @@
 <?php
 
-require ('_validate-helper.php');
- 
-    // error variable
+require('_validate-helper.php');
+
+// error variable
 $error = array();
 $namecategories = validate_input_text($_POST['namecategories']);
-if(empty($namecategories)){
+if (empty($namecategories)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
 
-
-if(empty($error)){
-
+if (empty($error)) {
 
 
-
-        // //Get connect SQL
-    try{
+    // //Get connect SQL
+    try {
         $connect = $db->con;
     } catch (ErrorException $er) {
-        print "Error: ". $er->getMessage();
+        print "Error: " . $er->getMessage();
     }
 
-       // Insert table user
-       $sql = "INSERT INTO category (brand_id, brand_name) 
+    // Insert table user
+    $sql = "INSERT INTO category (brand_id, brand_name) 
        VALUES ('', '$namecategories')";
 
-       if ($connect->query($sql) === TRUE) {
+    if ($connect->query($sql) === TRUE) {
         print "New record created successfully";
         header("location: ../admin/_view-categories.php");
-       } else {
+    } else {
         print "Error: " . $sql . "<br>" . $connect->error;
-       }
+    }
 
-}
-else {
+} else {
     echo 'Not validated';
 }

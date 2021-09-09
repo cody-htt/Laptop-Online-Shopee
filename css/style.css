@@ -261,22 +261,23 @@ button, button:focus {
         opacity: 0.6;
     }
 }
+
 /* Custom keyframe */
 
 /* Custom CSS for registration and login */
-:root{
+:root {
     --font-ubuntu: 'Ubuntu', sans-serif;
     --color-red-orange: #ff5252;
     --color-orange: #ff5e57;
 }
 
-#register{
+#register {
     padding: 5% 0;
     background: url("../assets/avatar/background-3.jpg") no-repeat;
     background-size: cover;
 }
 
-#login-form{
+#login-form {
     padding: 10% 0;
     background: url("../assets/avatar/background-2.jpg") no-repeat;
     background-size: cover;
@@ -286,7 +287,7 @@ button, button:focus {
     color: var(--color-red-orange);
 }
 
-#register .upload-profile-image{
+#register .upload-profile-image {
     position: relative;
     width: 12%;
     margin-left: auto;
@@ -294,11 +295,11 @@ button, button:focus {
     transition: filter .6s ease;
 }
 
-#register .upload-profile-image:hover{
+#register .upload-profile-image:hover {
     filter: drop-shadow(1px 1px 25px var(--color-red-orange));
 }
 
-#upload-profile{
+#upload-profile {
     position: absolute;
     top: 0;
     z-index: 10;
@@ -307,11 +308,11 @@ button, button:focus {
     opacity: 0;
 }
 
-#upload-profile::-webkit-file-upload-button{
+#upload-profile::-webkit-file-upload-button {
     visibility: hidden;
 }
 
-#upload-profile::before{
+#upload-profile::before {
     content: '';
     display: inline-block;
     height: 180px;
@@ -320,7 +321,7 @@ button, button:focus {
     border-radius: 50%;
 }
 
-#register .upload-profile-image .camera-icon{
+#register .upload-profile-image .camera-icon {
     position: absolute;
     top: 150px;
     width: 40px !important;
@@ -328,7 +329,7 @@ button, button:focus {
     filter: invert(30%) !important
 }
 
-#register .upload-profile-image:hover .camera-icon{
+#register .upload-profile-image:hover .camera-icon {
     filter: invert(100%) !important
 }
 
@@ -337,7 +338,7 @@ button, button:focus {
 #reg-form input[type='password'],
 #log-form input[type='text'],
 #log-form input[type='email'],
-#log-form input[type='password']{
+#log-form input[type='password'] {
     border: none;
     border-radius: unset;
     border-bottom: 0.15em solid var(--color-orange);
@@ -350,7 +351,7 @@ button, button:focus {
 #reg-form input[type='password'],
 #log-form input[type='text'],
 #log-form input[type='email'],
-#log-form input[type='password']{
+#log-form input[type='password'] {
     outline: none;
     box-shadow: none;
 }
@@ -368,17 +369,18 @@ button, button:focus {
         color: #ffffff;
         filter: blur(0.1em);
         text-shadow: 0 0 5px #00b3ff,
-                     0 0 10px #00b3ff,
-                     0 0 20px #00b3ff,
-                     0 0 40px #00b3ff;
+        0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff;
     }
     5%, 95% {
         color: #4b7bec;
         filter: blur(0px);
         text-shadow: 0 0 5px #00b3ff,
-                     0 0 10px #00b3ff,
-                     0 0 20px #00b3ff,
-                     0 0 40px #00b3ff;
+        0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff;
     }
 }
+
 /* Header Glowing Button */

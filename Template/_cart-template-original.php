@@ -51,11 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <div class="qty d-flex pt-2">
                                     <div class="d-flex font-roboto w-25">
                                         <button class="qty-up border bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><em
-                                                class="fas fa-angle-up"></em></button>
+                                                    class="fas fa-angle-up"></em></button>
                                         <input type="text" class="qty-input border px-2 mw-100 bg-light"
                                                data-id="<?php echo $item['item_id'] ?? '0'; ?>" disabled value="1" placeholder="1">
                                         <button class="qty-down border bg-light" data-id="<?php echo $item['item_id'] ?? '0' ?>"><em
-                                                class="fas fa-angle-down"></em></button>
+                                                    class="fas fa-angle-down"></em></button>
                                     </div>
                                 </div>
                                 <div class="d-flex pt-1">

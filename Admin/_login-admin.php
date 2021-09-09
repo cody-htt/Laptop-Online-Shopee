@@ -4,7 +4,7 @@ session_start();
 require('login-admin-header.php');
 
 //Call for register-helper
-require ('../Database/_validate-helper.php');
+require('../Database/_validate-helper.php');
 ?>
 
 <?php

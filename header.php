@@ -58,8 +58,8 @@ if (isset($_SESSION['user_id'])) {
         <div class="col-md-4 offset-md-3 text-right">
             <span class="font-roboto font-size-14">
                 <?php
-                if (!empty($_SESSION['user_id'])){
-                    echo "Welcome!"." ".$user['first_name']." ".$user['last_name']." ";
+                if (!empty($_SESSION['user_id'])) {
+                    echo "Welcome!" . " " . $user['first_name'] . " " . $user['last_name'] . " ";
                     echo '<a href="user-info.php" class="px-1 border-left p-text-color">
                     <em class="fa fa-user" aria-hidden="true"></em>&nbsp;Account Info</a>';
                     echo '<a href="logout.php" class="px-1 border-left p-text-color">Logout</a>';
@@ -106,7 +106,8 @@ if (isset($_SESSION['user_id'])) {
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
                     <span class="font-size-16 px-2 text-white"><em class="fas fa-shopping-cart"></em></span>
                     <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?></span>
-<!--                    <span class="px-3 py-2 rounded-pill text-dark bg-light">--><?php //echo count($product->getData('cart')); ?><!--</span>-->
+                    <!--                    <span class="px-3 py-2 rounded-pill text-dark bg-light">-->
+                    <?php //echo count($product->getData('cart')); ?><!--</span>-->
                 </a>
             </form>
         </div>

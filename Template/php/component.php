@@ -1,7 +1,8 @@
 <?php
 
-function cartElement($productImg, $productName, $productBrand, $productPrice, $productid) {
-$element = "
+function cartElement($productImg, $productName, $productBrand, $productPrice, $productid)
+{
+    $element = "
     <form>
         <div class=\"row border-top py-3 mt-3\">
             <div class=\"col-sm-2\">
@@ -59,5 +60,5 @@ $element = "
     </form>
     ";
 
-echo $element;
+    echo $element;
 }
