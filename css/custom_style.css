@@ -182,3 +182,9 @@ body{
 .container .box .content #email {
     text-transform: capitalize;
 }
+
+.container .box .content #last-name,
+.container .box .content #first-name,
+.container .box .content #email {
+    color: #00cec9;
+}
