@@ -28,6 +28,14 @@ class Product
         return $productsArray;
     }
 
+    public function getProductInCart(string $productTable = 'product'){
+        $query_item = "SELECT * FROM $productTable";
+
+        $result = mysqli_query($this->db->con,$query_item);
+
+        return $result;
+    }
+
     public function getItemBrand(string $categoryTable = 'category')
     {
         $query_brand = $this->db->con->query("SELECT * FROM {$categoryTable}" );
@@ -41,7 +49,7 @@ class Product
         return $categoryArray;
     }
 
-    //get product from cart table in database
+    //Get product from cart table in database
     public function getProductFromCart($item_id = null, $productTable = 'product')
     {
         if (isset($item_id)) {

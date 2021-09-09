@@ -24,6 +24,7 @@ $db = new DBController();
 //Initial Product object
 $product = new Product($db);
 $product_import = $product->getData();
+//$product_in_cart = $product->getProductFromCart();
 $item_brand = $product->getItemBrand();
 
 //Initial Cart object

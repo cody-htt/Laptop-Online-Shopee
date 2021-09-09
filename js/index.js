@@ -75,13 +75,13 @@ $(document).ready(
         $qty_up.click(function (e) {
             let $input = $(`.qty-input[data-id='${$(this).data("id")}']`);
             let $price = $(`.product-price[data-id='${$(this).data("id")}']`);
-
             //Change product in cart price using ajax call
             $.ajax({
                 url: "template/ajax.php", type: 'POST',
                 data: {itemid: $(this).data("id")},
                 success: function (result) {
                     let obj = JSON.parse(result);
+                    console.log(obj[0]);
                     let item_price = obj[0]['item_price'];
 
                     if ($input.val() >= $default_val && $input.val() <= $max_val) {
@@ -97,15 +97,14 @@ $(document).ready(
                         $deal_price.text(subtotal.toFixed(2));
                     }
                 }
-
             })
+            e.preventDefault();
         });
 
         // Click on qty down button
         $qty_down.click(function (e) {
             let $input = $(`.qty-input[data-id='${$(this).data("id")}']`);
             let $price = $(`.product-price[data-id='${$(this).data("id")}']`);
-
             //Change product in cart price using ajax call
             $.ajax({
                 url: "template/ajax.php", type: 'POST',
@@ -113,6 +112,7 @@ $(document).ready(
                 success: function (result) {
                     let obj = JSON.parse(result);
                     let item_price = obj[0]['item_price'];
+                    console.log(obj[0]);
 
                     if ($input.val() > $default_val && $input.val() <= $max_val + 1) {
                         $input.val(function (i, oldval) {
@@ -127,8 +127,8 @@ $(document).ready(
                         $deal_price.text(subtotal.toFixed(2));
                     }
                 }
-
             })
+            e.preventDefault();
         });
 
         // Validation user register information
