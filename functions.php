@@ -30,11 +30,6 @@ $item_brand = $product->getItemBrand();
 //Initial Cart object
 $cart = new Cart($db);
 
-//Initial Users object
-$user = new Users($db);
-$user_import = $user->getData();
-
-
 //Initial Categories object
 $categories = new Categories($db);
 $categories_import = $categories->getData();

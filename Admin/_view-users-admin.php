@@ -26,12 +26,11 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="col-md-8 col-lg-offset-1">
                 <a href="_create-users-admin.php">Create</a>
                 <br>
                 <br>
-                <table class="table">
-
+                <table class="table table-hover">
                     <tr>
                         <!-- Name -->
                         <th scope="col">
@@ -53,7 +52,6 @@ include('menuAdmin.php');
                         </th>
 
                     </tr>
-
                     <?php foreach ($usersAdmin_import as $item) { ?>
                         <tr>
                             <td scope="row">

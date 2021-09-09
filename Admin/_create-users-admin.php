@@ -32,19 +32,17 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
-                <table>
+            <div class="col-md-6">
+                <table class="table table-hover">
                     <form action="_create-users-admin.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <tr>
                             <th><label for="nameproduct">First Name:</label></th>
                             <td><input type="text" placeholder="First Name" id="first_name" name="first_name"></td>
                         </tr>
-
                         <tr>
                             <th><label for="nameproduct">Last Name:</label></th>
                             <td><input type="text" placeholder="Last Name" id="last_name" name="last_name"></td>
                         </tr>
-
                         <tr>
                             <th><label for="nameproduct">User:</label></th>
                             <td><input type="text" placeholder="User" id="user" name="user"></td>
@@ -57,18 +55,15 @@ include('menuAdmin.php');
                             <td></td>
                             <td><input type="submit" value="Create User"></td>
                         </tr>
-
-
                     </form>
                 </table>
-
-
             </div>
-
         </div>
+        <!-- /. ROW  -->
 
     </div>
     <!-- /. PAGE WRAPPER  -->
+
 </div>
 <?php
 

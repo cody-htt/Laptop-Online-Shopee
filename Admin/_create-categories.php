@@ -33,7 +33,7 @@ include('menuAdmin.php');
         <hr/>
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-6">
-                <table>
+                <table class="table table-hover">
                     <form action="_create-categories.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <tr>
                             <th><label for="namecategories">Name Categories:</label></th>

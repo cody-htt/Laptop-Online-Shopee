@@ -34,7 +34,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-6">
 
-                <table>
+                <table class="table table-hover">
                     <form action="_delete-categories.php" method="POST" enctype="multipart/form-data" id="add-categories-form">
                         <?php
                         $item_id = $_GET['brand_id'] ?? 1;

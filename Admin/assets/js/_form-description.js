@@ -1,6 +1,6 @@
 tinymce.init({
     selector: 'td #basic-example',
-    height: 500,
+    height: 250,
     menubar: false,
     plugins: [
         'advlist autolink lists link image charmap print preview anchor',
@@ -13,3 +13,5 @@ tinymce.init({
         'removeformat | help',
     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
 });
+
+

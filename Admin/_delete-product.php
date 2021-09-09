@@ -32,9 +32,9 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="col-12 col-lg-offset-1">
 
-                <table>
+                <table class="table table-hover" style="width: 45vw;">
                     <form action="_delete-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <?php
                         $item_id = $_GET['item_id'] ?? 1;
@@ -44,65 +44,53 @@ include('menuAdmin.php');
                                 <tr>
                                     <th><label for="nameproduct">Name Product: </label></th>
                                     <td><input type="text" placeholder="Name Product" id="nameproduct" name="nameproduct"
-                                               value=<?php echo($item["item_name"] ?? 'default') ?>></td>
+                                               value="<?php echo($item["item_name"] ?? 'default') ?>"></td>
                                 </tr>
                                 <input type="text" id="idproduct" name="idproduct"
-                                       value=<?php echo($item["item_id"] ?? 'default') ?> hidden>
+                                       value="<?php echo($item["item_id"] ?? 'default') ?>" hidden>
                                 <tr>
                                     <th><label for="brand">Brand Product:</label></th>
                                     <td><input type="text" placeholder="Brand" id="brand" name="brand"
-                                               value=<?php echo($item["item_brand"] ?? 'default') ?>></td>
+                                               value="<?php echo($item["item_brand"] ?? 'default') ?>"></td>
                                 </tr>
                                 <tr>
                                     <th>Description</th>
                                     <td>
-                                                <textarea id="basic-example" name="description">
-                                                <?php echo($item["item_desc"] ?? 'default') ?>
-                                                </textarea>
+                                        <textarea id="basic-example" name="description">
+                                        <?php echo($item["item_desc"] ?? 'default') ?>
+                                        </textarea>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <th><span>Memory:</span></th>
-                                    <td>
                                     <td><input type="text" placeholder="Memory" id="memory" name="memory"
-                                               value=<?php echo($item["item_memory"] ?? 'default') ?>></td>
-                                    </td>
+                                               value="<?php echo($item["item_memory"] ?? 'default') ?>"></td>
                                 </tr>
                                 <tr>
                                     <th><span>CPU:</span></th>
-                                    <td>
                                     <td><input type="text" placeholder="CPU" id="cpu" name="cpu"
-                                               value=<?php echo($item["item_cpu"] ?? 'default') ?>></td>
-                                    </td>
+                                               value="<?php echo($item["item_cpu"] ?? 'default') ?>"></td>
                                 </tr>
                                 <tr>
                                     <th><span>GPU:</span></th>
-                                    <td>
                                     <td><input type="text" placeholder="GPU" id="gpu" name="gpu"
-                                               value=<?php echo($item["item_gpu"] ?? 'default') ?>></td>
-                                    </td>
+                                               value="<?php echo($item["item_gpu"] ?? 'default') ?>"></td>
                                 </tr>
                                 <tr>
                                     <th><span>Drive:</span></th>
-                                    <td>
                                     <td><input type="text" placeholder="Drive" id="drive" name="drive"
-                                               value=<?php echo($item["item_drive"] ?? 'default') ?>></td>
-                                    </td>
+                                               value="<?php echo($item["item_drive"] ?? 'default') ?>"></td>
                                 </tr>
                                 <tr>
                                     <th><span>Moniter:</span></th>
-                                    <td>
                                     <td><input type="text" placeholder="Moniter" id="moniter" name="moniter"
-                                               value=<?php echo($item["item_monitor"] ?? 'default') ?>></td>
-                                    </td>
+                                               value="<?php echo($item["item_monitor"] ?? 'default') ?>"></td>
                                 </tr>
                                 <tr>
                                     <th><span>OS:</span></th>
-                                    <td>
                                     <td><input type="text" placeholder="OS" id="os" name="os"
-                                               value=<?php echo($item["item_os"] ?? 'default') ?>></td>
-                                    </td>
+                                               value="<?php echo($item["item_os"] ?? 'default') ?>"></td>
                                 </tr>
 
 
@@ -126,13 +114,13 @@ include('menuAdmin.php');
                                 <tr>
                                     <th><label for="price">Price Product:</label></th>
                                     <td><input type="text" placeholder="Price" id="price" name="price"
-                                               value=<?php echo($item["item_price"] ?? 'default') ?>></td>
+                                               value="<?php echo($item["item_price"] ?? 'default') ?>"></td>
                                 </tr>
 
                                 <tr>
                                     <th><label for="namediscountpriceproduct">Discount Price:</label></th>
                                     <td><input type="text" placeholder="Discount Price" id="discountprice" name="discountprice"
-                                               value=<?php echo($item["discount_price"] ?? 'default') ?>></td>
+                                               value="<?php echo($item["discount_price"] ?? 'default') ?>"></td>
                                 </tr>
 
 

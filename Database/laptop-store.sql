@@ -377,6 +377,12 @@ ALTER TABLE `user`
     MODIFY `user_id` int (11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+    MODIFY `admin_id` int (11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints for dumped tables
 --
 

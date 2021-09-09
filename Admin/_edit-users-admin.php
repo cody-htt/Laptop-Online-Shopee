@@ -32,10 +32,10 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="col-md-6">
 
 
-                <table>
+                <table class="table table-hover">
                     <form action="_edit-users-admin.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <?php
                         $item_id = $_GET['admin_id'] ?? 1;

@@ -32,8 +32,8 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
-                <table>
+            <div class="col-lg-12 col-lg-offset-1">
+                <table class="table table-hover" style="width: 45vw;">
                     <form action="_create-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <tr>
                             <th><label for="nameproduct">Name Product: </label></th>
@@ -116,12 +116,8 @@ include('menuAdmin.php');
 
                     </form>
                 </table>
-
-
             </div>
-
         </div>
-
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
@@ -130,7 +126,7 @@ include('menuAdmin.php');
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 
-<script src="assets\js\_form-description.js"></script>
+<script src="../Admin/assets/js/_form-description.js"></script>
 
 <?php
 
