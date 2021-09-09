@@ -18,7 +18,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh'?>,
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh' ?>,
                     Love to see you back.
                 </h5>
             </div>

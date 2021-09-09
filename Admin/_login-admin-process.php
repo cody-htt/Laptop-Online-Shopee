@@ -14,7 +14,6 @@ if (empty($password)) {
 
 if (empty($error)) {
 
-
     //Query for user information
     $query_string = "SELECT * FROM admin WHERE ad_user=?";
 
@@ -58,7 +57,7 @@ if (empty($error)) {
             header("location: index.php");
             exit();
         } else {
-            print "You are not a member, please register";
+            echo '<script>window.alert(\'Your credential is incorrect, please try again!!!\')</script>';
         }
     }
 } else {

@@ -32,7 +32,7 @@ $cart = new Cart($db);
 
 //Initial Categories object
 $categories = new Categories($db);
-$categories_import = $categories->getData();
+$categories_import = $categories->getCateData();
 
 
 //Initial User-Admin object

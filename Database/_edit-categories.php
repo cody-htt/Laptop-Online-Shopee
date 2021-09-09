@@ -1,16 +1,14 @@
 <?php
 
-require('_validate-helper.php');
-
-// error variable
 $error = array();
-$namecategories = validate_input_text_admin_site($_POST['namecategories']);
-if (empty($namecategories)) {
+
+$name_category = validate_input_text_admin_site($_POST['namecategories']);
+if (empty($name_category)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
-$idcategories = validate_input_text_admin_site($_POST['idcategories']);
-if (empty($idcategories)) {
+$category_id = validate_input_text_admin_site($_POST['idcategories']);
+if (empty($category_id)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
@@ -18,17 +16,13 @@ if (empty($error)) {
 
 
     // //Get connect SQL
-    try {
-        $connect = $db->con;
-    } catch (ErrorException $er) {
-        print "Error: " . $er->getMessage();
-    }
+    $connect = $db->con;
 
     $item_id = $_GET['item_id'] ?? 1;
 
     // update table product
 
-    $sql = "UPDATE category SET brand_name ='$namecategories' WHERE brand_id=$idcategories";
+    $sql = "UPDATE category SET brand_name = '$name_category' WHERE brand_id= $category_id";
 
 
     if ($connect->query($sql) === TRUE) {

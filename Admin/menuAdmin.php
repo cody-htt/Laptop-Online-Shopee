@@ -7,7 +7,8 @@
                 <img src="assets/img/find_user.png" class="user-image img-responsive"/>
             </li>
             <li style="width: 250px">
-                <a class="" href="index.php"><i class="fa fa-dashboard fa-3x"></i> <h3 style="display: inline-block;">Dashboard</h3></a>
+                <a class="" href="index.php"><i class="fa fa-dashboard fa-3x"></i>
+                    <h3 style="display: inline-block;">Dashboard</h3></a>
             </li>
             <li>
                 <a href="#">Users Admin management<span class="fa arrow"></span></a>

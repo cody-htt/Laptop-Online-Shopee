@@ -18,7 +18,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh'?>,
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh' ?>,
                     Love to see you back.
                 </h5>
             </div>
@@ -26,13 +26,17 @@ include('menuAdmin.php');
 
         <!-- /. ROW  -->
         <hr/>
-        <div class="row">
-            <div class="col-sm-8 col-lg-offset-1">
+        <div class="row d-flex">
+            <div class="col-lg-10 col-lg-offset-1">
                 <a href="_create-product.php">Create</a>
                 <br>
                 <br>
-                <table class="table table-hover" style="width: 35vw;">
+                <table class="table table-hover" style="width: 50vw;">
                     <tr>
+                        <!-- Brand -->
+                        <th scope="col">
+                            <span> Product Brand </span>
+                        </th>
                         <!-- Name -->
                         <th scope="col">
                             <span> Name Product </span>
@@ -50,24 +54,27 @@ include('menuAdmin.php');
                     </tr>
 
                     <?php foreach ($product_import as $item) { ?>
-                    <tr>
-                        <td scope="row">
-                            <span><?php echo $item['item_name'] ?? "Default"; ?></span>
-                        </td>
-                        <td>
-                            <span>$ <?php echo $item['item_price'] ?? "0"; ?></span>
-                        </td>
-                        <td>
+                        <tr>
+                            <td>
+                                <span><?php echo $item['item_brand'] ?? "Default"; ?></span>
+                            </td>
+                            <td>
+                                <span><?php echo $item['item_name'] ?? "Default"; ?></span>
+                            </td>
+                            <td>
+                                <span>$ <?php echo $item['item_price'] ?? "0"; ?></span>
+                            </td>
+                            <td>
                             <span> <a href="<?php printf('%s?item_id=%s', '_edit-product.php', $item['item_id']); ?>">
                                     Edit</a>
                             </span>
-                        </td>
-                        <td>
+                            </td>
+                            <td>
                             <span> <a href="<?php printf('%s?item_id=%s', '_delete-product.php', $item['item_id']); ?>">
                                     Delete</a>
                             </span>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
                     <?php } //closing foreach function?>
 
                 </table>

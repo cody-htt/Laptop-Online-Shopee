@@ -1,17 +1,13 @@
 <?php
 
-require('_validate-helper.php');
-
 // error variable
 $error = array();
-$namecategories = validate_input_text_admin_site($_POST['namecategories']);
-if (empty($namecategories)) {
+$name_category = validate_input_text_admin_site($_POST['namecategories']);
+if (empty($name_category)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
-
 if (empty($error)) {
-
 
     // //Get connect SQL
     try {
@@ -21,8 +17,7 @@ if (empty($error)) {
     }
 
     // Insert table user
-    $sql = "INSERT INTO category (brand_id, brand_name) 
-       VALUES ('', '$namecategories')";
+    $sql = "INSERT INTO category (brand_id, brand_name) VALUES ('', '$name_category')";
 
     if ($connect->query($sql) === TRUE) {
         print "New record created successfully";

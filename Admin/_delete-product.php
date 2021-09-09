@@ -23,7 +23,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh'?>,
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh' ?>,
                     Love to see you back.
                 </h5>
             </div>
@@ -139,7 +139,8 @@ include('menuAdmin.php');
 
 <!-- Script -->
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script src="../Admin/assets/js/_form-description.js"</script>
+<script src="../Admin/assets/js/_form-description.js"
+</script>
 
 <?php
 include('footer.php');

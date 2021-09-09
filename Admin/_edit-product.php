@@ -23,7 +23,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh'?>,
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh' ?>,
                     Love to see you back.
                 </h5>
             </div>
@@ -107,7 +107,8 @@ include('menuAdmin.php');
                                                 <img src="<?php echo($image1) ?>" alt="" height="100px" width="auto">
                                             </div>
                                             <div>
-                                                <input type="file" class="form-control-file" name="profileUpload" id="upload-profile" value="">
+                                                <input type="file" class="form-control-file" name="profileUpload" id="upload-profile"
+                                                       value="">
 
                                                 <input type="text" id="profileUpload2" name="profileUpload2"
                                                        value="<?php echo($item["item_image"] ?? 'default') ?>" hidden>

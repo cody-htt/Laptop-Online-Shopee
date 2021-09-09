@@ -1,7 +1,5 @@
 <?php
 
-require('_validate-helper.php');
-
 // error variable
 $error = array();
 $firstname = validate_input_text_admin_site($_POST['firstname']);
@@ -36,15 +34,10 @@ if (empty($error)) {
     echo($firstname);
 
     // //Get connect SQL
-    try {
-        $connect = $db->con;
-    } catch (ErrorException $er) {
-        print "Error: " . $er->getMessage();
-    }
+    $connect = $db->con;
 
     // delete table admin
     $sql = " DELETE FROM admin WHERE admin_id = $userId";
-
 
     if ($connect->query($sql) === TRUE) {
         print "New record created successfully";

@@ -22,7 +22,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh'?>,
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh' ?>,
                     Love to see you back.
                 </h5>
             </div>
@@ -44,7 +44,7 @@ include('menuAdmin.php');
                                 <select name="brand" id="brand">
                                     <?php foreach ($categories_import as $item) { ?>
                                         <option
-                                            value="<?php echo $item['brand_name'] ?? "Default"; ?>"><?php echo $item['brand_name'] ?? "Default"; ?>
+                                                value="<?php echo $item['brand_name'] ?? "Default"; ?>"><?php echo $item['brand_name'] ?? "Default"; ?>
                                         </option>
                                     <?php } //closing foreach function?>
                                 </select>

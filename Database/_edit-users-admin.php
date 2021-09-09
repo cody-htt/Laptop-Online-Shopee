@@ -1,7 +1,5 @@
 <?php
 
-require('_validate-helper.php');
-
 // error variable
 $error = array();
 $firstname = validate_input_text_admin_site($_POST['firstname']);

@@ -25,7 +25,7 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh'?>,
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Tung Huynh' ?>,
                     Love to see you back.
                 </h5>
             </div>
@@ -40,16 +40,16 @@ include('menuAdmin.php');
 
                         <?php
                         $item_id = $_GET['brand_id'] ?? 1;
-                        foreach ($categories->getData() as $item):
+                        foreach ($categories->getCateData() as $item):
                             if ($item['brand_id'] == $item_id):
                                 ?>
                                 <tr>
                                     <th><label for="namecategories">Name Categories: </label></th>
                                     <td><input type="text" placeholder="Name Categories" id="namecategories" name="namecategories"
-                                               value=<?php echo($item["brand_name"] ?? 'default') ?>></td>
+                                               value=<?php echo($item['brand_name'] ?? 'default') ?>></td>
                                 </tr>
                                 <input type="text" id="idcategories" name="idcategories"
-                                       value=<?php echo($item["brand_id"] ?? 'default') ?> hidden>
+                                       value=<?php echo($item['brand_id'] ?? 'default') ?> hidden>
                                 <tr>
                                     <td></td>
                                     <td><input type="submit" value="Edit Brand"></td>

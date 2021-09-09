@@ -5,13 +5,13 @@ require('_validate-helper.php');
 
 // error variable
 $error = array();
-$productbrand = validate_input_text_admin_site($_POST['brand']);
-if (empty($productbrand)) {
+$product_brand = validate_input_text_admin_site($_POST['brand']);
+if (empty($product_brand)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
-$nameproduct = validate_input_text_admin_site($_POST['nameproduct']);
-if (empty($nameproduct)) {
+$name_product = validate_input_text_admin_site($_POST['nameproduct']);
+if (empty($name_product)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
@@ -20,8 +20,8 @@ if (empty($decriptionProduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$nameproduct = validate_input_text_admin_site($_POST['nameproduct']);
-if (empty($nameproduct)) {
+$name_product = validate_input_text_admin_site($_POST['nameproduct']);
+if (empty($name_product)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
@@ -80,7 +80,7 @@ if (empty($error)) {
         print "Error: " . $er->getMessage();
     }
     // Insert table user
-    $sql = "SELECT * FROM category WHERE brand_name = '$productbrand' ";
+    $sql = "SELECT * FROM category WHERE brand_name = '$product_brand' ";
 
 
     if ($connect->query($sql) === TRUE) {
@@ -104,7 +104,7 @@ if (empty($error)) {
     // Insert table user
     $sql = "INSERT INTO product (item_id, brand_id, item_brand, item_name, item_desc, item_memory, 
        item_cpu, item_gpu, item_drive, item_monitor, item_os, item_price, item_image, item_register, discount_price) 
-       VALUES ('', $brandId, '$productbrand', '$nameproduct', '$decriptionProduct','$memoryproduct',
+       VALUES ('', $brandId, '$product_brand', '$name_product', '$decriptionProduct','$memoryproduct',
        '$cpuproduct','$gpuproduct','$driveproduct','$moniterproduct','$osproduct','$price', '$profileImage', NOW(), '$discountprice' )";
 
 

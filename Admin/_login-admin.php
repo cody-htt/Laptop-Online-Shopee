@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-
 <!-- Registration area -->
 <section id="login-form">
     <div class="row m-0">
@@ -23,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="upload-profile-image d-flex justify-content-center py-5">
                 <div class="text-center">
-                    <img src="./../assets/avatar/demo-avatar.png"
+                    <img src="assets/img/find_user.png"
                          style="width: 250px; height: 250px;"
                          class="img rounded-circle" alt="profile">
                 </div>

@@ -13,51 +13,18 @@ class Categories
     }
 
     //fetch product data
-
-    public function getData(string $productTable = 'category')
+    public function getCateData(string $cateTable = 'category'): array
     {
-        $query_product = $this->db->con->query("SELECT * FROM {$productTable}");
-        $productsArray = array();
+        $query_product = $this->db->con->query("SELECT * FROM {$cateTable}");
+        $cateArray = array();
 
         //Import products to resultArray
         while ($item = mysqli_fetch_array($query_product, MYSQLI_ASSOC)) {
-            $productsArray[] = $item;
+            $cateArray[] = $item;
         }
 
         //return product
-        return $productsArray;
+        return $cateArray;
     }
-
-    // public function getItemBrand(string $categoryTable = 'category')
-    // {
-    //     $query_brand = $this->db->con->query("SELECT * FROM {$categoryTable}" );
-    //     $categoryArray = array();
-
-    //     //Import brand_name to categoryArray
-    //     while ($item = mysqli_fetch_array($query_brand, MYSQLI_ASSOC)){
-    //         $categoryArray[] = $item;
-    //     }
-
-    //     return $categoryArray;
-    // }
-
-    //get product from cart table in database
-    // public function getProductFromCart($item_id = null, $productTable = 'product')
-    // {
-    //     if (isset($item_id)) {
-    //         //Query String
-    //         $query_product = $this->db->con->query("SELECT * FROM {$productTable} WHERE item_id={$item_id}");
-
-    //         $productArray = array();
-
-    //         //Import products to resultArray
-    //         while ($item = mysqli_fetch_array($query_product, MYSQLI_ASSOC)) {
-    //             $productArray[] = $item;
-    //         }
-
-    //         //return product
-    //         return $productArray;
-    //     }
-    // }
 
 }
