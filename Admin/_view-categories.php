@@ -27,7 +27,7 @@
                 <hr />
             <div class="row" >
                     <div class="col-md-3 col-sm-6 col-xs-6">
-                        <a href="_create-user.php">Create</a>  
+                        <a href="_create-categories.php">Create</a>  
                         <br>     
                         <br>              
                         <table  class="table">

@@ -8,7 +8,7 @@
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require('../Database/_edit-Product.php');
+    require('../Database/_edit-categories.php');
 }
 ?>
 

@@ -39,9 +39,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <th><label for="nameproduct">Name Product: </label></th>
                                 <td><input type="text" placeholder="Name Product" id="nameproduct" name="nameproduct" value=> </td>
                             </tr>
+
+
                             <tr>
                                 <th><label for="brand">Brand Product:</label></th>
-                                <td><input type="text" placeholder="Brand" id="brand" name="brand" value=> </td>
+                                <td>
+
+                                <select name="brand" id="brand">
+                                    <?php foreach ($categories_import as $item) { ?>
+                                        <option value="<?php echo $item['brand_name'] ?? "Default"; ?>"><?php echo $item['brand_name'] ?? "Default"; ?></option>
+                                    <?php } //closing foreach function?>
+                                    
+                                </select>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Description </th>
@@ -117,7 +127,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
+
+
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+        <script src="assets\js\_form-description.js"></script>
+
 <?php
+
+
+
 
     include('footer.php');
 ?>

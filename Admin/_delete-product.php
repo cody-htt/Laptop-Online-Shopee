@@ -134,6 +134,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
+
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+        <script src="assets\js\_form-description.js"></script>
+
 <?php
 
     include('footer.php');

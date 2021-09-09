@@ -58,6 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <textarea id="basic-example" name="description" >
                                                 <?php echo($item["item_desc"]?? 'default') ?>
                                                 </textarea>
+                                                <br>
+                                                <br>
                                             </td>
                                         </tr>
                                         
@@ -99,7 +101,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     <img src="<?php echo($image1) ?>" alt="" height="100px" width="auto" >
                                                 </div>
                                                 <div>
-                                                    <input type="file"  class="form-control-file" name="profileUpload" id="upload-profile">
+                                                    <input type="file"  class="form-control-file" name="profileUpload" id="upload-profile" value="">
+                                                    
+                                                    <input type="text"  id="profileUpload2" name="profileUpload2" value=<?php echo($item["item_image"]?? 'default') ?> hidden >
                                                 </div>
                                             </td>
                                         </tr>
@@ -140,31 +144,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-        <script>
 
+        <script src="assets\js\_form-description.js"></script>
 
-
-tinymce.init({
-  selector: 'td #basic-example',
-  height: 500,
-  menubar: false,
-  plugins: [
-    'advlist autolink lists link image charmap print preview anchor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table paste code help wordcount'
-  ],
-  toolbar: 'undo redo | formatselect | ' +
-  'bold italic backcolor | alignleft aligncenter ' +
-  'alignright alignjustify | bullist numlist outdent indent | ' +
-  'removeformat | help',
-  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-});
-
-
-
-
-
-</script>
 
 
 <?php

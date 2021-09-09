@@ -83,21 +83,26 @@ if(empty($error)){
         print "Error: ". $er->getMessage();
     }
     // Insert table user
-    $sql = "SELECT brand_id FROM category WHERE brand_name =$productbrand ";
+    $sql = "SELECT * FROM category WHERE brand_name = '$productbrand' ";
 
-    
 
     if ($connect->query($sql) === TRUE) {
-        $brandId = mysqli_fetch_array($connect->query($sql));
+        // $brandId = mysqli_fetch_array($connect->query($sql));
     } else {
     print "Error: " . $sql . "<br>" . $connect->error;
     }
 
-    
-    
+    $result = $connect->query($sql);
 
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          
+            $brandId = $row['brand_id'];          
+        }
+     } else {
+        printf('No record found.<br />');
+     }
     
-
 
        // Insert table user
        $sql = "INSERT INTO product (item_id, brand_id, item_brand, item_name, item_desc, item_memory, 

@@ -8,7 +8,7 @@
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require('../Database/_delete-Product.php');
+    require('../Database/_delete-categories.php');
 }
 ?>
 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                         <tr>
                                             <td></td>
-                                            <td><input type="submit" value="Delete product"></td>
+                                            <td><input type="submit" value="Delete Categories"></td>
                                         </tr>
                                         <?php
                                             endif;

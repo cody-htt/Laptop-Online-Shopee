@@ -3,36 +3,16 @@
 require ('_validate-helper.php');
  
     // error variable
-$error = array();
-$productbrand = validate_input_text($_POST['brand']);
-if(empty($productbrand)){
-    $error[] = "Please enter your Product Brand!!!";
-}
+    $error = array();
+    $namecategories = validate_input_text($_POST['namecategories']);
+    if(empty($namecategories)){
+        $error[] = "Please enter your Product Brand!!!";
+    }
 
-$productid = validate_input_text($_POST['idproduct']);
-if(empty($productid)){
-    $error[] = "Please enter your Product Brand!!!";
-}
-
-$nameproduct = validate_input_text($_POST['nameproduct']);
-if(empty($nameproduct)){
-    $error[] = "Please enter your Name Product !!!";
-}
-
-$imageproduct = validate_input_text($_POST['image']);
-if(empty($imageproduct)){
-    $error[] = "Please enter your Image product !!!";
-}
-
-$price = validate_input_text($_POST['price']);
-if(empty($price)){
-    $error[] = "Please enter your price!!!";
-}
-
-$discountprice = validate_input_text($_POST['discountprice']);
-if(empty($discountprice)){
-    $error[] = "Please enter your Discount price!!!";
-}
+    $idcategories = validate_input_text($_POST['idcategories']);
+    if(empty($idcategories)){
+        $error[] = "Please enter your Product Brand!!!";
+    }
 
 
 if(empty($error)){
@@ -47,18 +27,18 @@ if(empty($error)){
         print "Error: ". $er->getMessage();
     }
 
-    $item_id = $_GET['item_id'] ?? 1;
+    
 
        // delete table product
 
-        $sql = "DELETE FROM Product WHERE item_id=$productid";
+        $sql = "DELETE FROM category WHERE brand_id=$idcategories";
 
         
 
        if ($connect->query($sql) === TRUE) {
 
         print "New record created successfully";
-        header("location: ../admin/_view-products.php");
+        header("location: ../admin/_view-categories.php");
             exit();
 
        } else {
