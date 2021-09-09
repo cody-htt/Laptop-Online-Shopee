@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $user = array();
 if (isset($_SESSION['user_id'])) {
-    $user = get_user_info($db->con, $_SESSION['user_id']);
+    $user = get_admin_info($db->con, $_SESSION['user_id']);
 }
 ?>
 

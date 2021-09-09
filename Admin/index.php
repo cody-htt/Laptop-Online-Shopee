@@ -4,21 +4,17 @@
 <?php
 
 include('header.php');
-?>
-<?php
-session_start();
-?>
 
-<?php
+session_start();
+
 //Call for register-helper
 require('../Database/_validate-helper.php');
 
-$user = array();
+$user_admin = array();
 if (isset($_SESSION['admin_id'])) {
-    $user = get_user_info($db->con, $_SESSION['admin_id']);
+    $user_admin = get_admin_info($db->con, $_SESSION['admin_id']);
 }
 ?>
-
 
 <body>
 <?php
@@ -33,7 +29,9 @@ include('menuAdmin.php');
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                <h5>Welcome ! <?php echo $user_admin['first_name'] . " " . $user_admin['last_name'] ?? 'Admin'?>
+                    , Love to see you back.
+                </h5>
             </div>
         </div>
 
@@ -43,8 +41,8 @@ include('menuAdmin.php');
             <div class="col-md-3 col-sm-6 col-xs-6">
                 <p> <!-- /. Content  -->  </p>
             </div>
-
         </div>
+        <!-- /. ROW  -->
 
     </div>
     <!-- /. PAGE WRAPPER  -->

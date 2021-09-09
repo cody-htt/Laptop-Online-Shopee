@@ -10,30 +10,21 @@
             <a class="navbar-brand" href="index.html">Binary admin</a>
         </div>
 
-
         <?php
-
         if (!empty($_SESSION['admin_id'])) {
-
-
-            echo "Welcome!" . " " . $user['first_name'] . " " . $user['last_name'] . " ";
             echo '
-                        <div style="color: white;
-                        padding: 15px 50px 5px 50px;
-                        float: right;
-                        font-size: 16px;">  &nbsp; <a href="_logout-admin.php" class="btn btn-danger square-btn-adjust">Logout</a> </div>
-                    ';
-
-
-        } else {
-
+                <div style="color: white; padding: 10px 25px 5px 5px; float: right;font-size: 16px;">&nbsp; 
+                <a href="_logout-admin.php" class="btn btn-danger square-btn-adjust">Logout</a>
+                </div>';
+            echo '<div style="color: #2EA7EB; padding: 10px 5px 5px 5px; float: right; font-size: 22px;">';
+            echo "Welcome !" . " " . $user_admin['first_name'] . " " . $user_admin['last_name'] . " ";
+            echo '</div>';
+        }
+        else {
             echo '
-                        <div style="color: white;
-                        padding: 15px 50px 5px 50px;
-                        float: right;
-                        font-size: 16px;">  &nbsp; <a href="_login-admin.php" class="btn btn-danger square-btn-adjust">Login</a> </div>
-                    ';
-
+                <div style="color: white;padding: 15px 50px 5px 50px; float: right; font-size: 16px;">&nbsp; 
+                <a href="_login-admin.php" class="btn btn-danger square-btn-adjust">Login</a> 
+                </div>';
         }
         ?>
 

@@ -2,24 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <?php
-
 include('header.php');
 ?>
 
 <body>
+
 <?php
-
 include('sub-menu.php');
-
 include('menuAdmin.php');
 ?>
+
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
                 <h2>Admin Dashboard</h2>
-                <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                <h5>Welcome ! Tung Huynh, Love to see you back. </h5>
             </div>
         </div>
 
@@ -39,7 +38,6 @@ include('menuAdmin.php');
                         <th scope="col">
                             <span> Last Name  </span>
                         </th>
-
                         <!-- Price -->
                         <th scope="col">
                             <span> User </span>
@@ -50,7 +48,6 @@ include('menuAdmin.php');
                         <th scope="col">
                             <span></span>
                         </th>
-
                     </tr>
                     <?php foreach ($usersAdmin_import as $item) { ?>
                         <tr>
@@ -69,7 +66,6 @@ include('menuAdmin.php');
                             <td>
                                 <span> <a href="<?php printf('%s?admin_id=%s', '_delete-users-admin.php', $item['admin_id']); ?>">Delete</a> </span>
                             </td>
-
                         </tr>
                     <?php } //closing foreach function?>
                 </table>

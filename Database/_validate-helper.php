@@ -55,14 +55,17 @@ function upload_profile($path, $file): string
 
 
 //Get user info
-function get_user_info($con, $admin_id)
+function get_admin_info($con, $admin_id): bool|array
 {
 
 
     $query = "SELECT first_name, last_name, ad_user FROM admin WHERE admin_id=?";
-    try {
+
+    try
+    {
         $init_statement_getInfo = $con->stmt_init();
-    } catch (ErrorException $er) {
+    }
+    catch (ErrorException $er) {
         print "Error: " . $er->getMessage();
     }
     //Prepare SQL statement
