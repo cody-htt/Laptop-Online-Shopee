@@ -25,7 +25,7 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-8 col-lg-offset-1">
+            <div class="col-sm-6 col-lg-offset-1">
                 <a href="_create-users-admin.php">Create</a>
                 <br>
                 <br>
@@ -49,6 +49,7 @@ include('menuAdmin.php');
                             <span></span>
                         </th>
                     </tr>
+
                     <?php foreach ($usersAdmin_import as $item) { ?>
                         <tr>
                             <td scope="row">
@@ -61,23 +62,26 @@ include('menuAdmin.php');
                                 <span> <?php echo $item['ad_user'] ?? "Email"; ?></span>
                             </td>
                             <td>
-                                <span> <a href="<?php printf('%s?admin_id=%s', '_edit-users-admin.php', $item['admin_id']); ?>">Edit </a>  </span>
+                                <span> <a href="<?php printf('%s?admin_id=%s', '_edit-users-admin.php', $item['admin_id']); ?>">
+                                        Edit</a>
+                                </span>
                             </td>
                             <td>
-                                <span> <a href="<?php printf('%s?admin_id=%s', '_delete-users-admin.php', $item['admin_id']); ?>">Delete</a> </span>
+                                <span> <a href="<?php printf('%s?admin_id=%s', '_delete-users-admin.php', $item['admin_id']); ?>">
+                                        Delete</a>
+                                </span>
                             </td>
                         </tr>
                     <?php } //closing foreach function?>
+
                 </table>
             </div>
-
         </div>
-
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
-<?php
 
+<?php
 include('footer.php');
 ?>
 

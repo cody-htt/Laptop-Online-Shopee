@@ -2,23 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <?php
-
 include('header.php');
-?>
 
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('../Database/_add-Product.php');
 }
 ?>
 
 <body>
+
 <?php
-
 include('sub-menu.php');
-
 include('menuAdmin.php');
 ?>
+
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
     <div id="page-inner">
@@ -32,35 +29,31 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-lg-12 col-lg-offset-1">
-                <table class="table table-hover" style="width: 45vw;">
+            <div class="col-md-8 col-lg-offset-1">
+                <table class="table table-hover" style="width: 40vw;">
                     <form action="_create-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <tr>
                             <th><label for="nameproduct">Name Product: </label></th>
                             <td><input type="text" placeholder="Name Product" id="nameproduct" name="nameproduct" value=></td>
                         </tr>
-
-
                         <tr>
                             <th><label for="brand">Brand Product:</label></th>
                             <td>
-
                                 <select name="brand" id="brand">
                                     <?php foreach ($categories_import as $item) { ?>
-                                        <option value="<?php echo $item['brand_name'] ?? "Default"; ?>"><?php echo $item['brand_name'] ?? "Default"; ?></option>
+                                        <option
+                                            value="<?php echo $item['brand_name'] ?? "Default"; ?>"><?php echo $item['brand_name'] ?? "Default"; ?>
+                                        </option>
                                     <?php } //closing foreach function?>
-
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <th>Description</th>
                             <td>
-                                    <textarea id="basic-example" name="description">
-                                    </textarea>
+                                <textarea id="basic-example" name="description"></textarea>
                             </td>
                         </tr>
-
                         <tr>
                             <th><span>Memory:</span></th>
                             <td><input type="text" placeholder="Memory" id="memory" name="memory" value=></td>
@@ -85,8 +78,6 @@ include('menuAdmin.php');
                             <th><span>OS:</span></th>
                             <td><input type="text" placeholder="OS" id="os" name="os" value=></td>
                         </tr>
-
-
                         <tr>
                             <th><label for="image">Image Product:</label></th>
                             <td>
@@ -95,42 +86,33 @@ include('menuAdmin.php');
                                 </div>
                             </td>
                         </tr>
-
-
                         <tr>
                             <th><label for="price">Price Product:</label></th>
                             <td><input type="text" placeholder="Price" id="price" name="price" value=></td>
                         </tr>
-
                         <tr>
                             <th><label for="namediscountpriceproduct">Discount Price:</label></th>
                             <td><input type="text" placeholder="Discount Price" id="discountprice" name="discountprice" value=></td>
                         </tr>
-
-
                         <tr>
                             <td></td>
-                            <td><input type="submit" value="Create product"></td>
+                            <td><input type="submit" value="Add Product"></td>
                         </tr>
-
-
                     </form>
                 </table>
             </div>
         </div>
+        <!-- /. ROW  -->
+
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
 
-
+<!-- Script -->
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-
 <script src="../Admin/assets/js/_form-description.js"></script>
 
 <?php
-
-
 include('footer.php');
 ?>
 

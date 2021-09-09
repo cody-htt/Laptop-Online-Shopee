@@ -4,21 +4,19 @@
 <?php
 
 include('header.php');
-?>
 
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('../Database/_edit-Product.php');
 }
 ?>
 
 <body>
+
 <?php
-
 include('sub-menu.php');
-
 include('menuAdmin.php');
 ?>
+
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
     <div id="page-inner">
@@ -34,7 +32,7 @@ include('menuAdmin.php');
         <div class="container-fluid justify-content-center">
             <div class="row">
                 <div class="col-12 col-lg-offset-1">
-                    <table class="table table-hover" style="width: 45vw;">
+                    <table class="table table-hover" style="width: 40vw;">
                         <form action="_edit-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                             <?php
                             $item_id = $_GET['item_id'] ?? 1;
@@ -56,9 +54,9 @@ include('menuAdmin.php');
                                     <tr>
                                         <th>Description</th>
                                         <td>
-                                                <textarea id="basic-example" name="description">
+                                            <textarea id="basic-example" name="description">
                                                 <?php echo($item["item_desc"] ?? 'default') ?>
-                                                </textarea>
+                                            </textarea>
                                             <br>
                                             <br>
                                         </td>
@@ -141,23 +139,20 @@ include('menuAdmin.php');
                         </form>
                     </table>
                 </div>
-
             </div>
         </div>
+        <!-- /. ROW  -->
 
     </div>
     <!-- /. PAGE WRAPPER  -->
+
 </div>
 
-
+<!-- Script -->
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-
-<script src="assets\js\_form-description.js"></script>
-
+<script src="../Admin/assets/js/_form-description.js"></script>
 
 <?php
-
 include('footer.php');
 ?>
 

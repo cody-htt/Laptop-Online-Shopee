@@ -32,9 +32,10 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="col-sm-4">
                 <table class="table table-hover">
                     <form action="_edit-categories.php" method="POST" enctype="multipart/form-data" id="add-categories-form">
+
                         <?php
                         $item_id = $_GET['brand_id'] ?? 1;
                         foreach ($categories->getData() as $item):
@@ -47,11 +48,9 @@ include('menuAdmin.php');
                                 </tr>
                                 <input type="text" id="idcategories" name="idcategories"
                                        value=<?php echo($item["brand_id"] ?? 'default') ?> hidden>
-
-
                                 <tr>
                                     <td></td>
-                                    <td><input type="submit" value="Edit categories"></td>
+                                    <td><input type="submit" value="Edit Brand"></td>
                                 </tr>
                             <?php
                             endif;

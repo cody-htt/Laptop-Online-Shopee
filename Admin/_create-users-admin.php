@@ -2,23 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <?php
-
 include('header.php');
-?>
 
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('../Database/_add-users-admin.php');
 }
 ?>
 
 <body>
+
 <?php
-
 include('sub-menu.php');
-
 include('menuAdmin.php');
 ?>
+
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
     <div id="page-inner">
@@ -32,7 +29,7 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-4">
                 <table class="table table-hover">
                     <form action="_create-users-admin.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <tr>
@@ -65,8 +62,8 @@ include('menuAdmin.php');
     <!-- /. PAGE WRAPPER  -->
 
 </div>
-<?php
 
+<?php
 include('footer.php');
 ?>
 

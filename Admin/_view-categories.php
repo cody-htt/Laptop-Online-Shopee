@@ -26,7 +26,7 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6 col-lg-offset-1">
+            <div class="col-sm-4 col-lg-offset-1">
                 <a href="_create-categories.php">Create</a>
                 <br>
                 <br>
@@ -37,14 +37,12 @@ include('menuAdmin.php');
                         <th scope="col">
                             <span> Brand Name  </span>
                         </th>
-
                         <th scope="col">
                             <span></span>
                         </th>
                         <th scope="col">
                             <span></span>
                         </th>
-
                     </tr>
 
                     <?php foreach ($categories_import as $item) { ?>
@@ -52,23 +50,22 @@ include('menuAdmin.php');
                             <td scope="row">
                                 <span><?php echo $item['brand_name'] ?? "Brand Name"; ?></span>
                             </td>
-
-
                             <td>
-                                <span> <a href="<?php printf('%s?brand_id=%s', '_edit-categories.php', $item['brand_id']); ?>">Edit </a>  </span>
+                                <span> <a href="<?php printf('%s?brand_id=%s', '_edit-categories.php', $item['brand_id']); ?>">
+                                        Edit</a>
+                                </span>
                             </td>
-
                             <td>
-                                <span> <a href="<?php printf('%s?brand_id=%s', '_delete-categories.php', $item['brand_id']); ?>">Delete</a> </span>
+                                <span> <a href="<?php printf('%s?brand_id=%s', '_delete-categories.php', $item['brand_id']); ?>">
+                                        Delete</a>
+                                </span>
                             </td>
-
                         </tr>
                     <?php } //closing foreach function?>
+
                 </table>
             </div>
-
         </div>
-
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>

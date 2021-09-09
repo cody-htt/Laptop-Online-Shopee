@@ -32,34 +32,28 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="col-sm-4">
                 <table class="table table-hover">
                     <form action="_create-categories.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                         <tr>
                             <th><label for="namecategories">Name Categories:</label></th>
                             <td><input type="text" placeholder="Name Categories" id="namecategories" name="namecategories"></td>
                         </tr>
-
-
                         <tr>
                             <td></td>
-                            <td><input type="submit" value="Create Categories"></td>
+                            <td><input type="submit" value="Create New Brand"></td>
                         </tr>
-
-
                     </form>
                 </table>
-
-
             </div>
-
         </div>
+        <!-- /. ROW  -->
 
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
-<?php
 
+<?php
 include('footer.php');
 ?>
 

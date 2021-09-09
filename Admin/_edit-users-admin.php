@@ -32,11 +32,10 @@ include('menuAdmin.php');
         <!-- /. ROW  -->
         <hr/>
         <div class="row">
-            <div class="col-md-6">
-
-
+            <div class="col-sm-4">
                 <table class="table table-hover">
                     <form action="_edit-users-admin.php" method="POST" enctype="multipart/form-data" id="add-product-form">
+
                         <?php
                         $item_id = $_GET['admin_id'] ?? 1;
                         foreach ($usersAdmin->getData() as $item):
@@ -53,7 +52,6 @@ include('menuAdmin.php');
                                     <td><input type="text" placeholder="Last Name" id="lastname" name="lastname"
                                                value=<?php echo($item["last_name"] ?? 'default') ?>></td>
                                 </tr>
-
                                 <tr>
                                     <th><label for="user">User:</label></th>
                                     <td><input type="text" placeholder="User" id="user" name="user"
@@ -64,7 +62,6 @@ include('menuAdmin.php');
                                     <td><input type="text" placeholder="Password" id="password" name="password"
                                                value=<?php echo($item["ad_password"] ?? 'default') ?>></td>
                                 </tr>
-
                                 <tr>
                                     <td></td>
                                     <td><input type="submit" value="Edit User"></td>
@@ -77,9 +74,9 @@ include('menuAdmin.php');
                     </form>
                 </table>
             </div>
+            <!-- /. ROW  -->
 
         </div>
-
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>

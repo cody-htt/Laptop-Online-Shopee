@@ -4,21 +4,19 @@
 <?php
 
 include('header.php');
-?>
 
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require('../Database/_delete-Product.php');
 }
 ?>
 
 <body>
+
 <?php
-
 include('sub-menu.php');
-
 include('menuAdmin.php');
 ?>
+
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper">
     <div id="page-inner">
@@ -33,9 +31,9 @@ include('menuAdmin.php');
         <hr/>
         <div class="row">
             <div class="col-12 col-lg-offset-1">
-
                 <table class="table table-hover" style="width: 45vw;">
                     <form action="_delete-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
+
                         <?php
                         $item_id = $_GET['item_id'] ?? 1;
                         foreach ($product->getData() as $item):
@@ -56,8 +54,8 @@ include('menuAdmin.php');
                                 <tr>
                                     <th>Description</th>
                                     <td>
-                                        <textarea id="basic-example" name="description">
-                                        <?php echo($item["item_desc"] ?? 'default') ?>
+                                        <textarea disabled id="basic-example" name="description">
+                                            <?php echo($item["item_desc"] ?? 'default') ?>
                                         </textarea>
                                     </td>
                                 </tr>
@@ -92,8 +90,6 @@ include('menuAdmin.php');
                                     <td><input type="text" placeholder="OS" id="os" name="os"
                                                value="<?php echo($item["item_os"] ?? 'default') ?>"></td>
                                 </tr>
-
-
                                 <tr>
                                     <th><label for="image">Image Product:</label></th>
                                     <td>
@@ -109,21 +105,16 @@ include('menuAdmin.php');
                                         </div>
                                     </td>
                                 </tr>
-
-
                                 <tr>
                                     <th><label for="price">Price Product:</label></th>
                                     <td><input type="text" placeholder="Price" id="price" name="price"
                                                value="<?php echo($item["item_price"] ?? 'default') ?>"></td>
                                 </tr>
-
                                 <tr>
                                     <th><label for="namediscountpriceproduct">Discount Price:</label></th>
                                     <td><input type="text" placeholder="Discount Price" id="discountprice" name="discountprice"
                                                value="<?php echo($item["discount_price"] ?? 'default') ?>"></td>
                                 </tr>
-
-
                                 <tr>
                                     <td></td>
                                     <td><input type="submit" value="Delete product"></td>
@@ -135,23 +126,20 @@ include('menuAdmin.php');
 
                     </form>
                 </table>
-
-
             </div>
-
         </div>
+        <!-- /. ROW  -->
 
     </div>
     <!-- /. PAGE WRAPPER  -->
+
 </div>
 
+<!-- Script -->
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-
-<script src="assets\js\_form-description.js"></script>
+<script src="../Admin/assets/js/_form-description.js"</script>
 
 <?php
-
 include('footer.php');
 ?>
 
