@@ -1,6 +1,6 @@
 tinymce.init({
     selector: 'td #basic-example',
-    height: 180,
+    height: 250,
     menubar: false,
     plugins: [
         'advlist autolink lists link image charmap print preview anchor',

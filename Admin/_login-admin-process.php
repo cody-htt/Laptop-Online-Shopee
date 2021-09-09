@@ -61,5 +61,5 @@ if (empty($error)) {
         }
     }
 } else {
-    echo "Please fill your email and password to login...!";
+    echo '<script>window.alert(\'Your credential is incorrect, please try again!!!\')</script>';
 }

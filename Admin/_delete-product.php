@@ -56,9 +56,10 @@ include('menuAdmin.php');
                                 <tr>
                                     <th>Description</th>
                                     <td>
-                                        <textarea disabled id="basic-example" name="description">
+                                        <p disabled style="width: 40vw; height: 240px; text-align: justify; font-size: 14px;"
+                                           id="description" name="description">
                                             <?php echo($item["item_desc"] ?? 'default') ?>
-                                        </textarea>
+                                        </p>
                                     </td>
                                 </tr>
 

@@ -33,7 +33,7 @@ include('menuAdmin.php');
         <hr/>
         <div class="container-fluid justify-content-center">
             <div class="row">
-                <div class="col-12 col-lg-offset-1">
+                <div class="col-sm-12 col-lg-offset-1">
                     <table class="table table-hover" style="width: 40vw;">
                         <form action="_edit-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
                             <?php
