@@ -31,7 +31,7 @@ include('menuAdmin.php');
         <hr/>
         <div class="row">
             <div class="col-12 col-lg-offset-1">
-                <table class="table table-hover" style="width: 45vw;">
+                <table class="table table-hover" style="width: 40vw;">
                     <form action="_delete-product.php" method="POST" enctype="multipart/form-data" id="add-product-form">
 
                         <?php
