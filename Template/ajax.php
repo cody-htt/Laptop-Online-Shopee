@@ -12,6 +12,7 @@ $db = new DBController();
 $product = new Product($db);
 
 if (isset($_POST['itemid'])) {
+
     $result = $product->getProductFromCart($_POST['itemid']);
     echo json_encode($result);
 }

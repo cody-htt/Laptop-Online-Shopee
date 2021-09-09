@@ -3,8 +3,8 @@
 //Validate input text
 function validate_input_text($textValue): string
 {
-    if(!empty($textValue)){
-        $trim_text=trim($textValue);
+    if (!empty($textValue)) {
+        $trim_text = trim($textValue);
 
         // Remove illegal characters
         return filter_var($trim_text, FILTER_SANITIZE_STRING);
@@ -14,8 +14,8 @@ function validate_input_text($textValue): string
 
 function validate_input_email($emailValue): string
 {
-    if(!empty($emailValue)){
-        $trim_text=trim($emailValue);
+    if (!empty($emailValue)) {
+        $trim_text = trim($emailValue);
 
         // Remove illegal characters
         return filter_var($trim_text, FILTER_SANITIZE_EMAIL);
@@ -35,14 +35,14 @@ function upload_profile($path, $file): string
     $targetFilePath = $targetDir . $fileName;
     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
-    if(!empty($fileName)){
+    if (!empty($fileName)) {
 
         //Allow certain file format
         $allowType = array('jpg', 'png', 'jpeg', 'gif');
 
-        if(in_array($fileType, $allowType)){
+        if (in_array($fileType, $allowType)) {
             //Update file to the server
-            if(move_uploaded_file($file['tmp_name'], $targetFilePath)){
+            if (move_uploaded_file($file['tmp_name'], $targetFilePath)) {
                 return $targetFilePath;
             }
         }
@@ -56,10 +56,10 @@ function upload_profile($path, $file): string
 function get_user_info($con, $user_id)
 {
     $query = "SELECT first_name, last_name, user_email, profile_image FROM user WHERE user_id=?";
-    try{
+    try {
         $init_statement_getInfo = $con->stmt_init();
     } catch (ErrorException $er) {
-        print "Error: ". $er->getMessage();
+        print "Error: " . $er->getMessage();
     }
     //Prepare SQL statement
     $init_statement_getInfo->prepare($query);

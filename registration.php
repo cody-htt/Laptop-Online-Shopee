@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p class="p-1 m-0 font-roboto font-size-16 color-primary">Register and enjoy your shopping</p>
                 <span class="font-roboto color-primary">Already have account? <a href="login.php">Login</a></span>
             </div>
+
             <div class="upload-profile-image d-flex justify-content-center pb-5">
                 <div class="text-center">
                     <small id="avatar-text" class="form-text font-rubik text-light">Choose Your Avatar</small>
@@ -29,21 +30,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="file" form="reg-form" class="form-control-file" name="profileUpload" id="upload-profile">
                 </div>
             </div>
+
+
             <div class="d-flex justify-content-center">
                 <form action="registration.php" method="POST" enctype="multipart/form-data" id="reg-form">
                     <div class="form-row">
                         <div class="col">
-                            <input type="text" value="<?php if(isset($_POST['firstName'])) echo $_POST['firstName']; ?>"
+                            <input type="text" value="<?php if (isset($_POST['firstName'])) echo $_POST['firstName']; ?>"
                                    required name="firstName" id="firstName" class="form-control" placeholder="First Name">
                         </div>
                         <div class="col">
-                            <input type="text" value="<?php if(isset($_POST['lastName'])) echo $_POST['lastName']; ?>"
+                            <input type="text" value="<?php if (isset($_POST['lastName'])) echo $_POST['lastName']; ?>"
                                    required name="lastName" id="lastName" class="form-control" placeholder="Last Name">
                         </div>
                     </div>
                     <div class="form-row my-4">
                         <div class="col">
-                            <input type="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>"
+                            <input type="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"
                                    required name="email" id="email" class="form-control" placeholder="Email*">
                             <small id="email-error" class="text-danger"></small>
                         </div>
