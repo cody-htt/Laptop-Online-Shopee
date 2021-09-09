@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2021 at 06:06 PM
+-- Generation Time: Sep 09, 2021 at 10:05 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -26,7 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
--- Creation: Sep 07, 2021 at 02:24 PM
+-- Creation: Sep 09, 2021 at 04:16 PM
+-- Last update: Sep 09, 2021 at 07:28 PM
 --
 
 CREATE TABLE `admin` (
@@ -47,7 +48,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `first_name`, `last_name`, `ad_user`, `ad_password`, `register_date`) VALUES
-(0, 'admin', 'admin', 'admin@gmail.com', '123456', '2021-09-08 20:15:44');
+(1, 'Administrator', 'Laptop Admin', 'admin@gmail.com', '123456', '2021-09-09 23:17:26');
 
 -- --------------------------------------------------------
 
@@ -78,6 +79,7 @@ CREATE TABLE `cart` (
 -- Table structure for table `category`
 --
 -- Creation: Sep 07, 2021 at 02:24 PM
+-- Last update: Sep 09, 2021 at 07:19 PM
 --
 
 CREATE TABLE `category` (
@@ -129,6 +131,7 @@ CREATE TABLE `order-detail` (
 -- Table structure for table `product`
 --
 -- Creation: Sep 07, 2021 at 02:24 PM
+-- Last update: Sep 09, 2021 at 07:28 PM
 --
 
 CREATE TABLE `product` (
@@ -176,7 +179,7 @@ INSERT INTO `product` (`item_id`, `brand_id`, `item_brand`, `item_name`, `item_d
 (14, 4, 'Lenovo', 'Lenovo Ideapad slim3', 'Lenovo IDEAPAD SLIM 3 is a stylish and powerful Thin and Light Laptop Laptop and is powered by 2 core clocked at a speed of 2.3 GHz and sports a 15.6 Inchon the memory front, the laptop is equipped with a hard drive of 1 TB and a 4 GB DDR4 RAM, thereby making it possible to store ample amount of data.All the above features ensure that you breeze through all your tasks throughout the day.It is loaded with 2X1.5W Dual Speakers and Dolby Audio for a great audio experience. While it may be priced as an everyday-use laptop, the IdeaPad 3 (15, AMD) is something much more. Up to an AMD Ryzen™ 7 4700U Mobile Processor—bolstered by powerful memory, storage, and graphics options—means this device delivers beyond expectations. What', '16GB DDR4 Memory', 'Intel Core i5', 'Nvidia GTX 1080', '250GB SSD + 1TB HDD', 'QHD-240Fps', 'Win10 Home', 1549.00, './assets/Lenovo/lenovo_ideapad_slim_3_14_blue.jpg', '2021-08-30 12:08:57', 1649.00),
 (15, 4, 'Lenovo', 'Lenovo Ideapad slim4', 'With the latest AMD Ryzen 4000 series processors, the Lenovo IdeaPad Slim 4 14ARE05 is both powerful and energy efficient. In addition, you also have a sharp 14-inch Full HD screen, an extremely fast 512GB SSD hard drive and more surprises when the laptop is sold at a super cheap price. Lenovo IdeaPad Slim 4 14ARE05 has an outstanding configuration compared to competitors in the price range thanks to its AMD Ryzen 3 4300U processor. This is a 4000 series chip from AMD with 4 extremely powerful 4 cores and 4 threads, clocked at 2.7 - 3.7GHz and specially manufactured on the 7nm process. With the most advanced technologies, the Lenovo IdeaPad Slim 4 14ARE05 has powerful multi-core processing capabilities, making it fast for all the work you need. Besides the powerful new chip, Lenovo IdeaPad Slim 4 14ARE05 also owns 4GB of DDR4 RAM and 512GB of SSD hard drive. In which 8GB of DDR4 standard RAM will help you do more things at the same time thanks to enhanced multitasking ability. Moreover, a large 512GB SSD hard drive is a very expensive component, because it ensures both comprehensive computer acceleration and large storage capacity. You will have an ideal performance laptop in the price range.', '8GB DDR4 Memory', 'Intel Core i5', 'Nvidia GTX 1080', '250GB SSD + 1TB HDD', 'QHD-240Fps', 'Free DOS', 1599.00, './assets/Lenovo/lenovo_ideapad_slim_3_14iil05.jpg', '2021-08-30 12:08:57', 1899.00),
 (17, 2, 'HP', '1', 'Test Create product', '123', '123', '123', '123', '123', '123', 123.00, '../assets/product-image/background.png', '2021-09-08 20:14:15', 123.00),
-(18, 2, 'HP', 'Laptop 1', 'This is a laptop demo description', '8 GB Ram', 'Intel i7', 'Nvidia GTX 1060', '500GB SSD', 'QHD-144FPD', 'Free DOS', 10000.00, '../assets/product-image/background.png', '2021-09-08 20:28:35', 10000.00);
+(18, 2, 'HP', 'Laptop 15', 'This is a laptop demo description hihihihihiihiihihi', '8 GB Ram', 'Intel i7', 'Nvidia GTX 1060', '500GB SSD', 'QHD-144FPD', 'Free DOS', 10000.00, '../assets/product-image/demo-avatar.png', '2021-09-10 02:28:28', 10000.00);
 
 -- --------------------------------------------------------
 
@@ -206,8 +209,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `user_email`, `user_password`, `profile_image`, `register_date`) VALUES
-(1, 'Huynh', 'Thanh Tung', 'tungtest@gmail.com', '$2y$10$tNUReJqw8YwGqA8v2FTx7OGo12W.WkNUb/WX20DExOiC0wJBZ9.sa', './assets/user_avatar/face-4.jpeg', '2021-09-07 21:46:04'),
-(3, 'Tung', 'Huynh', 'Tung@gmail.com', '$2y$10$tLj9R0VlkBJ7snYndRwCQeK1lfcI0OKhL05uKhnyuhgAfgbRXVCfK', './assets/user_avatar/face-2.jpg', '2021-09-08 20:36:06');
+(1, 'Huynh', 'Thanh Tung', 'tungtest@gmail.com', '$2y$10$tNUReJqw8YwGqA8v2FTx7OGo12W.WkNUb/WX20DExOiC0wJBZ9.sa', './assets/user_avatar/face-4.jpeg', '2021-09-07 21:46:04');
 
 -- --------------------------------------------------------
 
@@ -276,6 +278,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
@@ -297,13 +305,13 @@ ALTER TABLE `order-detail`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
