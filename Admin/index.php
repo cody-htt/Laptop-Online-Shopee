@@ -2,18 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <?php
-
 include('header.php');
-
-session_start();
-
-//Call for register-helper
-require('../Database/_validate-helper.php');
-
-$user_admin = array();
-if (isset($_SESSION['admin_id'])) {
-    $user_admin = get_admin_info($db->con, $_SESSION['admin_id']);
-}
 ?>
 
 <body>

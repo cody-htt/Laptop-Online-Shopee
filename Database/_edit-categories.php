@@ -4,12 +4,12 @@ require('_validate-helper.php');
 
 // error variable
 $error = array();
-$namecategories = validate_input_text($_POST['namecategories']);
+$namecategories = validate_input_text_admin_site($_POST['namecategories']);
 if (empty($namecategories)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
-$idcategories = validate_input_text($_POST['idcategories']);
+$idcategories = validate_input_text_admin_site($_POST['idcategories']);
 if (empty($idcategories)) {
     $error[] = "Please enter your Product Brand!!!";
 }

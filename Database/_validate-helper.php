@@ -1,7 +1,7 @@
 <?php
 
 //Validate input text
-function validate_input_text($textValue): string
+function validate_input_text_admin_site($textValue): string
 {
     if (!empty($textValue)) {
         $trim_text = trim($textValue);

@@ -16,6 +16,16 @@
     <?php
     //Connect to MySQLi
     require('../functions.php');
+
+    session_start();
+
+    $user_admin = array();
+    if (isset($_SESSION['admin_id'])) {
+        require_once('../Database/_validate-helper.php');
+        $user_admin = get_admin_info($db->con, $_SESSION['admin_id']);
+    } else {
+        header('location: _login-admin.php');
+    }
     ?>
 </head>
 

@@ -4,27 +4,27 @@ require('_validate-helper.php');
 
 // error variable
 $error = array();
-$firstname = validate_input_text($_POST['firstname']);
+$firstname = validate_input_text_admin_site($_POST['firstname']);
 if (empty($firstname)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
-$lastname = validate_input_text($_POST['lastname']);
+$lastname = validate_input_text_admin_site($_POST['lastname']);
 if (empty($lastname)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$userId = validate_input_text($_POST['iduser']);
+$userId = validate_input_text_admin_site($_POST['iduser']);
 if (empty($userId)) {
     $error[] = "Please enter your price!!!";
 }
 
-$user = validate_input_text($_POST['user']);
+$user = validate_input_text_admin_site($_POST['user']);
 if (empty($user)) {
     $error[] = "Please enter your price!!!";
 }
 
-$password = validate_input_text($_POST['password']);
+$password = validate_input_text_admin_site($_POST['password']);
 if (empty($password)) {
     $error[] = "Please enter your Discount price!!!";
 }

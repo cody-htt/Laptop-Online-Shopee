@@ -4,73 +4,73 @@ require('_validate-helper.php');
 
 // error variable
 $error = array();
-$productbrand = validate_input_text($_POST['brand']);
+$productbrand = validate_input_text_admin_site($_POST['brand']);
 if (empty($productbrand)) {
     $error[] = "Please enter your Product Brand!!!";
 }
 
-$nameproduct = validate_input_text($_POST['nameproduct']);
+$nameproduct = validate_input_text_admin_site($_POST['nameproduct']);
 if (empty($nameproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$decriptionProduct = validate_input_text($_POST['description']);
+$decriptionProduct = validate_input_text_admin_site($_POST['description']);
 if (empty($decriptionProduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$nameproduct = validate_input_text($_POST['nameproduct']);
+$nameproduct = validate_input_text_admin_site($_POST['nameproduct']);
 if (empty($nameproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$memoryproduct = validate_input_text($_POST['memory']);
+$memoryproduct = validate_input_text_admin_site($_POST['memory']);
 if (empty($memoryproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$cpuproduct = validate_input_text($_POST['cpu']);
+$cpuproduct = validate_input_text_admin_site($_POST['cpu']);
 if (empty($cpuproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$gpuproduct = validate_input_text($_POST['gpu']);
+$gpuproduct = validate_input_text_admin_site($_POST['gpu']);
 if (empty($gpuproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$driveproduct = validate_input_text($_POST['drive']);
+$driveproduct = validate_input_text_admin_site($_POST['drive']);
 if (empty($driveproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$moniterproduct = validate_input_text($_POST['moniter']);
+$moniterproduct = validate_input_text_admin_site($_POST['moniter']);
 if (empty($moniterproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
-$osproduct = validate_input_text($_POST['os']);
+$osproduct = validate_input_text_admin_site($_POST['os']);
 if (empty($osproduct)) {
     $error[] = "Please enter your Name Product !!!";
 }
 
 
-$price = validate_input_text($_POST['price']);
+$price = validate_input_text_admin_site($_POST['price']);
 if (empty($price)) {
     $error[] = "Please enter your price!!!";
 }
 
-$discountprice = validate_input_text($_POST['discountprice']);
+$discountprice = validate_input_text_admin_site($_POST['discountprice']);
 if (empty($discountprice)) {
     $error[] = "Please enter your Discount price!!!";
 }
 
-$profileImage1 = validate_input_text($_POST['profileUpload2']);
+$profileImage1 = validate_input_text_admin_site($_POST['profileUpload2']);
 if (empty($profileImage1)) {
     $error[] = "Please enter your Discount price!!!";
 }
 
-$productid = validate_input_text($_POST['idproduct']);
+$productid = validate_input_text_admin_site($_POST['idproduct']);
 if (empty($productid)) {
     $error[] = "Please enter your Discount price!!!";
 }

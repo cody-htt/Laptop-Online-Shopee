@@ -7,7 +7,7 @@ if (empty($email)) {
     $error[] = "Please enter your Last name!!!";
 }
 
-$password = validate_input_text($_POST['password']);
+$password = validate_input_text_admin_site($_POST['password']);
 if (empty($password)) {
     $error[] = "Please enter your password!!!";
 }
@@ -53,12 +53,8 @@ if (empty($error)) {
     if (!empty($row)) {
         //verify user password
 
-
         if ($password == $row['ad_password']) {
-
-
             $_SESSION['admin_id'] = $row['admin_id'];
-
             header("location: index.php");
             exit();
         } else {

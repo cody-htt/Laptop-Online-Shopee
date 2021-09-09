@@ -4,22 +4,22 @@ require('_validate-helper.php');
 
 // error variable
 $error = array();
-$user_firstname = validate_input_text($_POST['firstname']);
+$user_firstname = validate_input_text_admin_site($_POST['firstname']);
 if (empty($user_firstname)) {
     $error[] = "Please enter your First Name!!!";
 }
 
-$user_id = validate_input_text($_POST['iduser']);
+$user_id = validate_input_text_admin_site($_POST['iduser']);
 if (empty($user_id)) {
     $error[] = "Please enter your id!!!";
 }
 
-$user_lastname = validate_input_text($_POST['lastname']);
+$user_lastname = validate_input_text_admin_site($_POST['lastname']);
 if (empty($user_lastname)) {
     $error[] = "Please enter your Last Name !!!";
 }
 
-$user_email = validate_input_text($_POST['email']);
+$user_email = validate_input_text_admin_site($_POST['email']);
 if (empty($user_email)) {
     $error[] = "Please enter your Email !!!";
 }

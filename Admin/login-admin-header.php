@@ -18,6 +18,7 @@
     require('../functions.php');
     ?>
 </head>
+
 <body>
 
 <main id="main-area">

@@ -5,12 +5,12 @@ require('register-helper.php');
 
 // error variable
 $error = array();
-$firstName = validate_input_text($_POST['firstName']);
+$firstName = validate_input_text_admin_site($_POST['firstName']);
 if (empty($firstName)) {
     $error[] = "Please enter your First name!!!";
 }
 
-$lastName = validate_input_text($_POST['lastName']);
+$lastName = validate_input_text_admin_site($_POST['lastName']);
 if (empty($lastName)) {
     $error[] = "Please enter your Last name!!!";
 }
@@ -20,12 +20,12 @@ if (empty($email)) {
     $error[] = "Please enter your Last name!!!";
 }
 
-$password = validate_input_text($_POST['password']);
+$password = validate_input_text_admin_site($_POST['password']);
 if (empty($password)) {
     $error[] = "Please enter your password!!!";
 }
 
-$confirm_pwd = validate_input_text($_POST['confirm-pwd']);
+$confirm_pwd = validate_input_text_admin_site($_POST['confirm-pwd']);
 if (empty($confirm_pwd)) {
     $error[] = "Please enter your confirm password!!!";
 }
