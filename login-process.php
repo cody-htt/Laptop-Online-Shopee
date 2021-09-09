@@ -7,7 +7,7 @@ if (empty($email)) {
     $error[] = "Please enter your Last name!!!";
 }
 
-$password = validate_input_text_admin_site($_POST['password']);
+$password = validate_input_text($_POST['password']);
 if (empty($password)) {
     $error[] = "Please enter your password!!!";
 }
