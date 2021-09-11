@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             cartElement($row['item_image'], $row['item_name'], $row['item_brand'], $row['item_price'], $row['item_id']);
                             $subtotal[$i] = $row['item_price'];
                             $i++;
-                            print_r($subtotal);
                         }
                     }
                 }
