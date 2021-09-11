@@ -56,10 +56,8 @@ include('menuAdmin.php');
                                 <tr>
                                     <th>Description</th>
                                     <td>
-                                        <p disabled style="width: 40vw; height: 240px; text-align: justify; font-size: 14px;"
-                                           id="description" name="description">
-                                            <?php echo($item["item_desc"] ?? 'default') ?>
-                                        </p>
+                                        <input style="width: 40vw; height: 240px; text-align: justify; font-size: 14px;"
+                                           id="basic-example" name="description" value="<?php echo($item["item_desc"] ?? 'default') ?>">
                                     </td>
                                 </tr>
 

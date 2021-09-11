@@ -63,11 +63,6 @@ if (empty($discountprice)) {
     $error[] = "Please enter your Discount price!!!";
 }
 
-// $profileImage1 = validate_input_text($_POST['profileUpload2']);
-// if(empty($profileImage1)){
-//     $error[] = "Please enter your Discount price!!!";
-// }
-
 $productid = validate_input_text_admin_site($_POST['idproduct']);
 if (empty($productid)) {
     $error[] = "Please enter your Discount price!!!";
@@ -79,7 +74,6 @@ $profileImage = upload_profile('../assets/product-image/', $fileImage);
 
 
 if (empty($error)) {
-
 
     // //Get connect SQL
     try {
