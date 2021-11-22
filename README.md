@@ -1,5 +1,5 @@
 # Laptop-Online-Shopee
-This is a e-commerce web demo
+This is an e-commerce web demo
 To be able to launch the web in XAMPP server, please refer to the following steps:
 
 - Open MySQL Database in http://localhost:[_Your_Config_Port_]/phpmyadmin/index.php
